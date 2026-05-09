@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>星际观察者手记 · 第3集 · 炉火路口</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #0a0c12; color: #e8e6e3; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; padding: 2rem 1rem; }
+.container { max-width: 880px; margin: 0 auto; background: #0f1118; border-radius: 32px; padding: 2rem; border: 1px solid #2a2d37; }
+h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+h1 small { font-size: 0.9rem; color: #f5a623; display: block; margin-top: 0.5rem; }
+.sub { color: #aaa; border-left: 3px solid #f5a623; padding-left: 1rem; margin: 1rem 0 2rem; }
+.episode { background: #13161f; border-radius: 20px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid #2a2d37; }
+.episode p { margin-bottom: 1.2rem; }
+.episode-meta { color: #f5a623; margin-bottom: 0.8rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+.section-title { color: #f5a623; font-weight: bold; margin: 2rem 0 0.5rem; font-size: 1.1rem; }
+.pullquote { background: #1a1f2e; border-left: 4px solid #f5a623; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; color: #ddd; }
+footer { margin-top: 3rem; text-align: center; font-size: 0.8rem; color: #6a6e7c; border-top: 1px solid #21242e; padding-top: 1.5rem; }
+a { color: #f5a623; text-decoration: none; }
+.back-link { display: inline-block; margin-bottom: 1rem; background: #1e212b; padding: 0.3rem 1rem; border-radius: 30px; font-size: 0.9rem; }
+.episode-nav { display: flex; justify-content: space-between; margin: 1.5rem 0; }
+.episode-nav a { background: #1e212b; padding: 0.4rem 1.2rem; border-radius: 30px; font-size: 0.9rem; }
+.update-note { background: #2a1f1a; padding: 0.5rem; border-radius: 12px; text-align: center; margin: 1rem 0; }
+.tts-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0f1118;
+    border-top: 1px solid #2a2d37;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tts-btn {
+    background: #c0a060;
+    color: #0a0c12;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+.tts-btn:hover { background: #d4b87a; }
+.tts-btn.playing { background: #8b0000; color: #e8e6e3; }
+.tts-speed {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #aaa;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+.tts-speed input[type="range"] {
+    width: 80px;
+    accent-color: #c0a060;
+}
+.tts-status {
+    color: #6a6e7c;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="dh7721-index.html" class="back-link">← 返回连载目录</a>
+<h1>星际观察者手记 <small>实验编号 DH-7721 · 临界窗口文明观测报告</small></h1>
+<div class="sub">一份来自暗能量主场的宇宙实验记录 · 每日更新</div>
+<div class="update-note">📖 第3集已更新 · 第一轮文明筛选的数据回来了</div>
+
+<div class="episode">
+<div class="episode-meta">第3集 · 第一次文明筛选</div>
+
+<p>我把时间轴拨回公元前3500年到公元前2000年之间。这一千五百年，地球上有三个地方同时亮起了文明的炉火——两河流域、尼罗河谷、印度河流域。但到这一集结束的时候，三盏灯灭了两盏，第三盏也在风中摇晃得厉害。</p>
+
+<div class="section-title">一、两河：观测系统被私有化</div>
+
+<p>底格里斯河与幼发拉底河之间的冲积平原，苏美尔人建起了人类最早的城市。他们发明了楔形文字，制定了最早的法典，神庙里的祭司记录税收、观测星象、预测洪水。这是一套精密的观测系统。斩杀线在30%到40%之间波动——对于一个早期文明来说，这个数据相当不错。</p>
+
+<p>但到了公元前2000年前后，两件事同时发生了。第一，灌溉渠里的盐碱一年比一年重——土地在哭泣，但没有人记录这个数据。第二，城邦之间的战争一年比一年频繁——军事贵族掌握了越来越多的权力，他们把观测系统变成了私有情报网。祭司阶层不再向神庙报告真实的粮产数据，而是在国王的宫殿里低声耳语。观测系统私有化之后，斩杀线在三代人之内从40%突破50%——文明进入不可逆的衰亡。</p>
+
+<p>我在报告里写下第一条死因：观测系统的私有化。当眼睛被收买，文明就瞎了。</p>
+
+<div class="section-title">二、埃及：观测权被垄断</div>
+
+<p>尼罗河谷，同时期。法老的解决方案和苏美尔的军事贵族完全相反——他把所有的观测权都收归自己。法老是太阳神之子，只有他能解读天意。神庙、粮仓、水利、税收，全部由法老一人观测。这是一个极高效的观测系统——但只有一个观测者。</p>
+
+<p>当气候波动导致尼罗河水位异常，法老的神权解释不了旱灾。他继续宣称自己是太阳神之子，但百姓看到的是干裂的土地和空空的粮仓。观测系统在三次旱灾中耗尽了公信力。不是被推翻，是被耗尽的。</p>
+
+<p>我在报告里写下第二条死因：观测权的单一化。当所有人都在等一个人的眼睛，那人瞎了，文明也就瞎了。</p>
+
+<div class="section-title">三、印度河：观测系统无防御</div>
+
+<p>印度河流域的哈拉帕文明，城市规划极精密，下水道系统领先世界一千年。他们的粮仓有标准化的度量衡，街道有统一的宽度，连砖块的尺寸都一模一样。这是一个高度发达的观测系统——但它有一个致命缺陷：没有军事。</p>
+
+<p>当雅利安人的战车从开伯尔山口涌入，哈拉帕的城邦一个接一个熄灭了。不是因为不够发达，是因为太发达了——发达到了忘了观测系统也需要防御。</p>
+
+<p>我写下第三条死因：观测系统没有防御能力。再精密的系统，也需要有人守门。</p>
+
+<div class="section-title">四、华夏的韧性：分布式观测</div>
+
+<p>三个样本，三种死法。我翻到下一个样本——东亚，黄河。华夏为什么没有在这一轮筛选中熄灭？我开始对比数据，然后看到了一个有趣的东西。</p>
+
+<p>华夏的观测系统是分布式的。没有法老把观测权垄断在自己手里，也没有军事贵族把观测系统变成私有情报网。每个部落都在观测自己的盐池、土地、水源。当黄河泛滥冲垮一个部落，数据不会全部清零——其他部落还在记录。这种松散的分布，是韧性的萌芽。</p>
+
+<p>当然，这时的华夏还不是一个统一的文明。它还只是黄土高原上的一堆碎片。但碎片和废墟不一样——碎片是可以拼接的。废墟不行。</p>
+
+<p>我合上档案，看着舷窗外的蓝绿球体。云层下有灯火，也有废墟。</p>
+
+<p><em>（明天预告：希腊的昙花一现——城邦公心如何在奴隶制上亮了又灭。）</em></p>
+</div>
+
+<div class="episode-nav">
+<a href="dh7721-2.html">← 第2集</a>
+<a href="dh7721-4.html">第4集 →</a>
+</div>
+
+<footer>
+炉火路口 · 文明逆熵操作系统 | 小说连载 · 保留版权<br>
+星际观察者手记 · 每日更新
+</footer>
+</div>
+<div class="tts-bar" id="ttsBar" style="display:none;">
+    <button class="tts-btn" id="ttsBtn" onclick="toggleTTS()">🔊 朗读</button>
+    <div class="tts-speed">
+        <span>语速</span>
+        <input type="range" id="ttsRate" min="0.5" max="3" step="0.25" value="1" oninput="updateRate()">
+        <span id="ttsRateLabel">1x</span>
+    </div>
+    <span class="tts-status" id="ttsStatus"></span>
+</div>
+let tts = null;
+let ttsUtterance = null;
+let ttsPlaying = false;
+let ttsPaused = false;
+let ttsText = '';
+let ttsChunks = [];
+let ttsChunkIndex = 0;
+
+function initTTS() {
+    if (!('speechSynthesis' in window)) return;
+    // 收集页面正文
+    const container = document.querySelector('.episode') || document.querySelector('.container');
+    if (!container) return;
+    ttsText = container.innerText.trim();
+    if (ttsText.length < 50) return;
+    // 按句子拆分
+    ttsChunks = ttsText.match(/[^。！？；\n]+[。！？；\n]?/g) || [ttsText];
+    document.getElementById('ttsBar').style.display = 'flex';
+}
+
+function toggleTTS() {
+    if (!ttsText) return;
+    const btn = document.getElementById('ttsBtn');
+    if (ttsPlaying && !ttsPaused) {
+        // 暂停
+        window.speechSynthesis.pause();
+        ttsPaused = true;
+        ttsPlaying = false;
+        btn.textContent = '▶ 继续';
+        btn.classList.remove('playing');
+        document.getElementById('ttsStatus').textContent = '已暂停';
+    } else if (ttsPaused) {
+        // 继续
+        window.speechSynthesis.resume();
+        ttsPaused = false;
+        ttsPlaying = true;
+        btn.textContent = '⏸ 暂停';
+        btn.classList.add('playing');
+        document.getElementById('ttsStatus').textContent = '正在朗读...';
+    } else {
+        // 开始
+        ttsChunkIndex = 0;
+        ttsPlaying = true;
+        ttsPaused = false;
+        btn.textContent = '⏸ 暂停';
+        btn.classList.add('playing');
+        document.getElementById('ttsStatus').textContent = '正在朗读...';
+        speakNextChunk();
+    }
+}
+
+function speakNextChunk() {
+    if (ttsChunkIndex >= ttsChunks.length) {
+        // 读完
+        ttsPlaying = false;
+        ttsPaused = false;
+        const btn = document.getElementById('ttsBtn');
+        btn.textContent = '🔊 朗读';
+        btn.classList.remove('playing');
+        document.getElementById('ttsStatus').textContent = '朗读完毕';
+        return;
+    }
+    const utterance = new SpeechSynthesisUtterance(ttsChunks[ttsChunkIndex]);
+    utterance.rate = parseFloat(document.getElementById('ttsRate').value);
+    utterance.lang = 'zh-CN';
+    utterance.onend = () => {
+        ttsChunkIndex++;
+        speakNextChunk();
+    };
+    utterance.onerror = (e) => {
+        if (e.error !== 'interrupted') {
+            ttsChunkIndex++;
+            speakNextChunk();
+        }
+    };
+    window.speechSynthesis.speak(utterance);
+    ttsUtterance = utterance;
+    document.getElementById('ttsStatus').textContent = `正在朗读... (${ttsChunkIndex + 1}/${ttsChunks.length})`;
+}
+
+function updateRate() {
+    const rate = document.getElementById('ttsRate').value;
+    document.getElementById('ttsRateLabel').textContent = rate + 'x';
+    // 如果正在播放，重新开始当前段落以应用新语速
+    if (ttsPlaying && !ttsPaused) {
+        window.speechSynthesis.cancel();
+        // 重新读当前段落
+        const utterance = new SpeechSynthesisUtterance(ttsChunks[ttsChunkIndex]);
+        utterance.rate = parseFloat(rate);
+        utterance.lang = 'zh-CN';
+        utterance.onend = () => {
+            ttsChunkIndex++;
+            speakNextChunk();
+        };
+        utterance.onerror = (e) => {
+            if (e.error !== 'interrupted') {
+                ttsChunkIndex++;
+                speakNextChunk();
+            }
+        };
+        window.speechSynthesis.speak(utterance);
+        ttsUtterance = utterance;
+    }
+}
+
+// 页面加载时初始化
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(initTTS, 500);
+});
+</body>
+</html>

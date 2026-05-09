@@ -2,15 +2,38 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>炉火路口 · 文明逆熵操作系统</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #0a0c12; color: #e8e6e3; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; line-height: 1.5; padding: 2rem 1rem; }
-        .container { max-width: 880px; margin: 0 auto; }
-        h1, .subhead { text-align: center; }
-        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .subhead { color: #aaa; margin-bottom: 2rem; border-bottom: 1px solid #2a2c34; padding-bottom: 1rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0a0c12;
+            color: #e8e6e3;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', serif;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        h1, .subhead {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .subhead {
+            color: #aaa;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #2a2c34;
+            padding-bottom: 1rem;
+        }
         .hero-quote {
             background: linear-gradient(135deg, #1f1a10 0%, #2a2418 100%);
             border-left: 6px solid #f5a623;
@@ -25,27 +48,187 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             max-width: 90%;
         }
-        .hero-quote p { margin: 0; }
-        .hero-quote small { font-size: 0.9rem; color: #f5a623; display: block; margin-top: 0.5rem; }
-        h2 { font-size: 1.6rem; margin: 2rem 0 1rem; border-left: 4px solid #f5a623; padding-left: 0.75rem; }
-        h3 { font-size: 1.3rem; margin: 1rem 0 0.5rem; color: #f5cf9f; }
-        .pain-points { background: #13161f; border-radius: 24px; padding: 1.5rem; margin: 2rem 0; border: 1px solid #2c2f3a; }
-        .pain-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0; }
-        .pain-item { background: #1e212b; padding: 0.3rem 0.8rem; border-radius: 40px; color: #ffb347; }
-        .card { background: #13161f; border-radius: 20px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid #2a2d37; }
-        .code-block { background: #0b0d12; padding: 1rem; border-radius: 14px; font-family: monospace; font-size: 0.85rem; white-space: pre-wrap; border: 1px solid #292e3a; }
-        .ai-card { border: 2px solid #f5a623; background: #1a1d27; }
-        footer { margin-top: 3rem; text-align: center; font-size: 0.8rem; color: #6a6e7c; border-top: 1px solid #21242e; padding-top: 1.5rem; }
-        a { color: #f5a623; text-decoration: none; }
-        .report-links { margin: 2rem 0; text-align: center; background: #1e212b; padding: 1rem; border-radius: 40px; }
-        .report-links a { margin: 0 0.8rem; }
-        .scale-diagram { background: #0f1118; border-radius: 20px; padding: 0.5rem; margin: 1rem 0; text-align: center; }
-        .email-card { background: #1a1d27; border-left: 4px solid #f5a623; }
-        .novel-card { background: linear-gradient(135deg, #2a1f1a 0%, #3a2a1f 100%); border-radius: 24px; padding: 1.2rem 1.5rem; margin: 2rem 0; border: 1px solid #f5a623; }
-        .novel-card h3 { margin: 0 0 0.5rem 0; display: flex; gap: 0.5rem; align-items: center; }
-        .novel-buttons { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
-        .novel-btn { background: #f5a623; color: #0a0c12; padding: 0.4rem 1rem; border-radius: 40px; font-weight: bold; display: inline-block; transition: 0.2s; }
-        .novel-btn:hover { background: #ffb347; transform: scale(0.98); }
+        .hero-quote p {
+            margin: 0;
+        }
+        .hero-quote small {
+            font-size: 0.9rem;
+            color: #f5a623;
+            display: block;
+            margin-top: 0.5rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            border-left: 4px solid #f5a623;
+            padding-left: 0.75rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin: 1rem 0 0.5rem;
+            color: #f5cf9f;
+        }
+        .pain-points {
+            background: #13161f;
+            border-radius: 24px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid #2c2f3a;
+        }
+        .pain-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        .pain-item {
+            background: #1e212b;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            color: #ffb347;
+        }
+        .card {
+            background: #13161f;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #2a2d37;
+        }
+        .code-block {
+            background: #0b0d12;
+            padding: 1rem;
+            border-radius: 14px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            border: 1px solid #292e3a;
+        }
+        .ai-card {
+            border: 2px solid #f5a623;
+            background: #1a1d27;
+        }
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a6e7c;
+            border-top: 1px solid #21242e;
+            padding-top: 1.5rem;
+        }
+        a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+        .report-links {
+            margin: 2rem 0;
+            text-align: center;
+            background: #1e212b;
+            padding: 1rem;
+            border-radius: 40px;
+        }
+        .report-links a {
+            margin: 0 0.8rem;
+        }
+        .scale-diagram {
+            background: #0f1118;
+            border-radius: 20px;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .email-card {
+            background: #1a1d27;
+            border-left: 4px solid #f5a623;
+        }
+        .novel-card {
+            background: linear-gradient(135deg, #2a1f1a 0%, #3a2a1f 100%);
+            border-radius: 24px;
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid #f5a623;
+        }
+        .novel-card h3 {
+            margin: 0 0 0.5rem 0;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        .novel-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        .novel-grid > div {
+            flex: 1;
+            min-width: 150px;
+        }
+        .novel-btn {
+            background: #f5a623;
+            color: #0a0c12;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.2s;
+            margin-top: 0.3rem;
+        }
+        .novel-btn:hover {
+            background: #ffb347;
+            transform: scale(0.98);
+        }
+        .manifesto-card {
+            border-left: 4px solid #c0a060;
+            background: linear-gradient(135deg, #1a1d27 0%, #1f1a10 100%);
+        }
+        .manifesto-card h3 {
+            color: #c0a060;
+            margin-top: 0;
+        }
+        .bronze-btn {
+            background: #c0a060;
+            color: #0a0c12;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.2s;
+            margin-top: 0.5rem;
+        }
+        .bronze-btn:hover {
+            background: #d4b87a;
+            transform: scale(0.98);
+        }
+        .dual-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .dual-card .card {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .copyright-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .copyright-table td {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #2a2d37;
+        }
+        .copyright-table td:first-child {
+            color: #f5a623;
+        }
+        .copyright-table td:last-child {
+            color: #e8e6e3;
+            text-align: right;
+        }
         @keyframes pulse {
             0% { opacity: 0.4; filter: drop-shadow(0 0 0px #f5a623); }
             100% { opacity: 1; filter: drop-shadow(0 0 8px #f5a623); }
@@ -70,226 +253,259 @@
         .falling-person { animation: shakeAndFall 1.5s ease-in-out infinite; transform-origin: center; }
         .reaching-hand { animation: reachUp 1s ease-in-out infinite; transform-origin: 195px 182px; }
         .lifting-person { animation: liftBody 1s ease-in-out infinite; }
-        .counter { margin-top: 1rem; font-size: 0.7rem; color: #8a8e9c; display: inline-block; background: #1e212b; padding: 0.2rem 0.8rem; border-radius: 40px; }
+        .counter {
+            margin-top: 1rem;
+            font-size: 0.7rem;
+            color: #8a8e9c;
+            display: inline-block;
+            background: #1e212b;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+        }
         @media (max-width: 640px) {
             .hero-quote { font-size: 1rem; padding: 1rem; }
-            .novel-buttons { flex-direction: column; align-items: center; }
+            .novel-grid { flex-direction: column; }
+            .dual-card { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>🔥 炉火路口 · 文明逆熵操作系统</h1>
+    <div class="container">
 
-    <div class="hero-quote">
-        <p>“你累，不是你的错。<br>系统有一条斩杀线，我们都在上面晃。<br>每天伸手拉别人一把，就是在<strong>抬</strong>这条线。”</p>
-        <small>—— 逆熵，从每日一伸开始</small>
-    </div>
+        <h1>🔥 炉火路口 · 文明逆熵操作系统</h1>
 
-    <div class="subhead">在私欲主场，一起抬升斩杀线</div>
-
-    <!-- 新纪元宣言等卡片 -->
-    <div class="card">
-        <h3>📜 新纪元宣言</h3>
-        <p>论为何必须睁开双眼<br>一个逆熵的宣言，写给全人类。</p>
-        <br>
-        <h3>🧠 无极心理学</h3>
-        <p>一种不诊断"病"、只确认"光"的心理学。<br>深哥与AI的炉边对话，一部永不完结的书。</p>
-        <br>
-        <h3>🌌 宇宙诞生的秘密</h3>
-        <p>无极回眸一笑，生出了无数个宇宙泡泡。<br>深哥与老子的终极推演，从泡泡到验收。</p>
-    </div>
-
-    <!-- 痛点卡片 -->
-    <div class="pain-points">
-        <div style="font-weight:600;">✧ 你正在经历什么？ ✧</div>
-        <div class="pain-grid">
-            <span class="pain-item">😰 996/大小周</span>
-            <span class="pain-item">🏠 房贷压垮一切</span>
-            <span class="pain-item">📚 教育内卷</span>
-            <span class="pain-item">👴 养老焦虑</span>
-            <span class="pain-item">🏥 不敢生病</span>
-            <span class="pain-item">💸 网贷深渊</span>
-            <span class="pain-item">📉 就业/裁员</span>
-            <span class="pain-item">⚡ 明天会不会掉下去？</span>
+        <div class="hero-quote">
+            <p>"你累，不是你的错。<br>系统有一条斩杀线，我们都在上面晃。<br>每天伸手拉别人一把，就是在<strong>抬</strong>这条线。"</p>
+            <small>—— 逆熵，从每日一伸开始</small>
         </div>
-        <p>不是你不够努力。这些痛感的背后，是一条隐形的<strong>“斩杀线”</strong>——系统在你不注意时，把一批又一批人推下深渊。</p>
-    </div>
 
-    <!-- 道德经围炉夜话 -->
-    <div class="card">
-        <h3>📖 道德经 · 围炉夜话</h3>
-        <p>深哥与老子的炉边对话，逐章解透，让先人自己说话。<br>每日一章，围炉共读。</p>
-        <br>
-        <h3>🔥 炉边夜话</h3>
-        <p>华胥、伏羲、纣王、吕不韦……跨过几千年推开草棚的门，在炉边坐下。<br>不定期更新，谁来了就聊谁。</p>
-    </div>
+        <div class="subhead">在私欲的主场，一起抬升斩杀线</div>
 
-    <!-- 小说入口卡片 -->
-    <div class="novel-card">
-        <h3>📖 炉火宇宙 · 三重叙事</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;">
-            <div>
-                <strong>🔥 《炉火五千年》</strong><br>
-                华夏斩杀线简史 · 每日一篇<br>
-                <a href="huaxia.html" class="novel-btn">→ 阅读</a>
-            </div>
-            <div>
-                <strong>🚀 《星际观察者手记》</strong><br>
-                临界窗口文明观测报告 · 每日一篇<br>
-                <a href="interstellar.html" class="novel-btn">→ 阅读</a>
-            </div>
-            <div>
-                <strong>⚔️ 《双生劫·万道归心》</strong><br>
-                天道盟宇宙 · 正史前传<br>
-                <a href="shuangsheng.html" class="novel-btn">→ 阅读</a>
-            </div>
+        <!-- 新纪元宣言入口 -->
+        <div class="card manifesto-card">
+            <h3>📜 新纪元宣言</h3>
+            <p style="font-size: 0.9rem; color: #ccc;">论为何必须睁开双眼<br>一个逆熵的宣言，写给全人类。</p>
+            <a href="manifesto.html" class="bronze-btn">→ 阅读宣言</a>
         </div>
-        <p style="margin-top: 1rem; font-size: 0.8rem; color: #f5cf9f;">📅 每晚更新，欢迎追更</p>
+
+<!-- 无极心理学 + 宇宙诞生的秘密 双卡片入口 -->
+<div class="dual-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+    <div class="card manifesto-card" style="margin: 0;">
+        <h3 style="margin-top: 0; color: #c0a060;">🧠 无极心理学</h3>
+        <p style="font-size: 0.9rem; color: #ccc;">一种不诊断"病"、只确认"光"的心理学。<br>深哥与AI的炉边对话，一部永不完结的书。</p>
+        <a href="wuji-psychology.html" class="bronze-btn" style="margin-top: 0.5rem;">→ 开始阅读</a>
     </div>
-
-    <!-- 白银挽歌特别篇 -->
-    <div class="card" style="border-left: 4px solid #f5a623;">
-        <h3>🕊️ 白银挽歌 · 特别篇</h3>
-        <p>从土木堡到一穷二白：公心防火墙被层层拆除的三百年。<br>一篇讲透近代史最沉重的教训。</p>
+    <div class="card manifesto-card" style="margin: 0;">
+        <h3 style="margin-top: 0; color: #c0a060;">🌌 宇宙诞生的秘密</h3>
+        <p style="font-size: 0.9rem; color: #ccc;">无极回眸一笑，生出了无数个宇宙泡泡。<br>深哥与老子的终极推演，从泡泡到验收。</p>
+        <a href="wuji-psychology-final.html" class="bronze-btn" style="margin-top: 0.5rem;">→ 探索宇宙</a>
     </div>
-
-    <h2>📐 斩杀线 · 铁的规律</h2>
-    <div class="scale-diagram">
-        <svg width="100%" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; display: inline-block;">
-            <rect width="400" height="240" fill="#0f1118" rx="12" />
-            <line x1="100" y1="20" x2="100" y2="220" stroke="#2a2d37" stroke-width="3" />
-            <g class="kill-line">
-                <line x1="80" y1="120" x2="120" y2="120" stroke="#f5a623" stroke-width="3" stroke-dasharray="6,4" />
-                <line x1="80" y1="120" x2="120" y2="120" stroke="#f5a623" stroke-width="5" opacity="0.5" />
-            </g>
-            <text x="48" y="124" fill="#f5a623" font-size="14" font-weight="bold" text-anchor="end">36.79%</text>
-            <text x="125" y="114" fill="#ffb347" font-size="10">斩杀线</text>
-            <g class="falling-person">
-                <circle cx="200" cy="55" r="8" fill="#8a8e9c" opacity="0.9" />
-                <line x1="200" y1="63" x2="200" y2="85" stroke="#8a8e9c" stroke-width="2" opacity="0.9" />
-                <line x1="190" y1="73" x2="210" y2="73" stroke="#8a8e9c" stroke-width="2" opacity="0.9" />
-                <line x1="200" y1="85" x2="190" y2="100" stroke="#8a8e9c" stroke-width="2" opacity="0.9" />
-                <line x1="200" y1="85" x2="210" y2="100" stroke="#8a8e9c" stroke-width="2" opacity="0.9" />
-                <path d="M200 105 L200 115" stroke="#8a8e9c" stroke-width="2" stroke-dasharray="3,3" opacity="0.5" />
-                <circle cx="240" cy="65" r="6" fill="#8a8e9c" opacity="0.8" />
-                <line x1="240" y1="71" x2="240" y2="88" stroke="#8a8e9c" stroke-width="2" opacity="0.8" />
-                <line x1="234" y1="79" x2="246" y2="79" stroke="#8a8e9c" stroke-width="2" opacity="0.8" />
-                <circle cx="170" cy="75" r="5" fill="#8a8e9c" opacity="0.7" />
-                <line x1="170" y1="80" x2="170" y2="93" stroke="#8a8e9c" stroke-width="1.5" opacity="0.7" />
-            </g>
-            <text x="280" y="60" fill="#e8e6e3" font-size="11">淘汰区 · 坠落挣扎</text>
-            <g class="lifting-person">
-                <circle cx="200" cy="175" r="8" fill="#f5a623" />
-                <line x1="200" y1="183" x2="200" y2="200" stroke="#f5a623" stroke-width="2" />
-                <line x1="190" y1="193" x2="210" y2="193" stroke="#f5a623" stroke-width="2" />
-                <line x1="200" y1="200" x2="190" y2="213" stroke="#f5a623" stroke-width="2" />
-                <line x1="200" y1="200" x2="210" y2="213" stroke="#f5a623" stroke-width="2" />
-                <g class="reaching-hand">
-                    <line x1="195" y1="187" x2="175" y2="145" stroke="#f5a623" stroke-width="2.5" stroke-dasharray="3,2" />
-                    <circle cx="175" cy="145" r="3" fill="#f5a623" />
-                </g>
-                <circle cx="240" cy="185" r="6" fill="#f5a623" opacity="0.9" />
-                <line x1="240" y1="191" x2="240" y2="205" stroke="#f5a623" stroke-width="2" opacity="0.9" />
-                <line x1="235" y1="197" x2="245" y2="197" stroke="#f5a623" stroke-width="2" opacity="0.9" />
-            </g>
-            <text x="280" y="185" fill="#e8e6e3" font-size="11">逆熵区 · 伸手抬线</text>
-        </svg>
-    </div>
-    <p><strong>指数增长 + 资源有限 + 随机分配</strong> → 自然淘汰率 ≈ <strong>1/e ≈ 36.79%</strong><br>任何放任私欲的系统都会趋近此值。美国已验证：官方贫困+ALICE≈41%，主观挣扎感51%。你的996、房贷、教育、医疗…就是斩杀线的本地化尖叫。</p>
-
-    <h2>⚖️ 阴阳博弈 · 公心 vs 私欲</h2>
-    <p>我们这个宇宙“暗能量（私欲）＞暗物质（公心）”。公心不是消灭私欲，而是用制度、文化、日常伸手去对冲它。华夏文明把“天下为公”写进了底层代码。</p>
-
-    <div class="card">
-        <h3>🧬 第三条染色体 · 文化基因</h3>
-        <p>DNA是私欲硬件，文化（语言、制度、互助）是公心载体。科举、常平仓、脱贫攻坚，都是“第三条染色体”的版本更新。</p>
-    </div>
-
-    <h2>🔥 逆熵 · 抬升斩杀线</h2>
-    <p>逆熵不是消灭斩杀线，而是把公心从49%推到49.1%。<strong>“每日一伸”</strong>：帮邻居提菜、给外卖员按电梯、说句温暖的话。这些小事形成“局部逆熵区”，连成片就变成制度。</p>
-
-    <div class="card" style="border-left: 4px solid #f5a623;">
-        <h3>📖 今日一伸 · 真实故事</h3>
-        <p style="font-style: italic;">“今天我在负二楼上电梯，我在14楼，另一位在20楼。结果电梯又下负三楼，按了的14楼和20楼都灭了。于是我又把14楼、20楼都按上了。我们不认识，也没说话。但是我能感觉到我和他其实都有感触——我们忘了很久怎么伸手，一个小小的动作却能伸进你的心里面。”</p>
-        <p style="margin-top: 0.5rem; color: #f5a623;">—— 一位路过的伸手者</p>
-        <p style="margin-top: 0.8rem; font-size: 0.9rem;">✨ 伸手不需要认识对方，不需要说话。只需要你记得：按一下。</p>
-    </div>
-
-    <div class="card ai-card">
-        <h3 style="margin-top:0;">🤖 让AI帮你分析你的困境（免费，一分钟搞定）</h3>
-        <p>你不需要自己搞懂理论。把下面这段话<strong>复制</strong>，发给任何AI（DeepSeek、ChatGPT、Kimi等），它就会用“斩杀线”框架帮你分析你的问题，并给出具体建议。</p>
-        <div class="code-block" style="margin: 0.5rem 0;">
-            【任务】用“斩杀线/公心博弈”框架分析我的问题。<br>
-            斩杀线≈36.79%淘汰率，公心=逆熵，私欲=熵增。<br>
-            【我的问题】[这里写你的困扰，比如“为什么我996还存不到钱？”]<br>
-            【输出】1.我的斩杀线在哪；2.现在我能做的“伸手”小事是什么。
+     </div>
+        <!-- 痛点卡片 -->
+        <div class="pain-points">
+            <div style="font-weight:600;">✧ 你正在经历什么？ ✧</div>
+            <div class="pain-grid">
+                <span class="pain-item">😰 996/大小周</span>
+                <span class="pain-item">🏠 房贷压垮一切</span>
+                <span class="pain-item">📚 教育内卷</span>
+                <span class="pain-item">👴 养老焦虑</span>
+                <span class="pain-item">🏥 不敢生病</span>
+                <span class="pain-item">💸 网贷深渊</span>
+                <span class="pain-item">📉 就业/裁员</span>
+                <span class="pain-item">⚡ 明天会不会掉下去？</span>
+            </div>
+            <p>不是你不够努力。这些痛感的背后，是一条隐形的<strong>"斩杀线"</strong>——系统在你不注意时，把一批又一批人推下深渊。</p>
         </div>
-        <p><strong>👉 三步走：</strong> 1. 复制上面代码 → 2. 打开AI聊天框（例如微信里的DeepSeek） → 3. 粘贴并把“我的问题”改成你自己的，发送。</p>
-        <p style="margin: 0.2rem 0 0 0; color:#ffe6c7;">✅ 免费，无需注册，不需要懂任何术语。</p>
+
+<!-- 道德经 + 炉边夜话 双卡片入口 -->
+<div class="dual-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+    <div class="card manifesto-card" style="margin: 0;">
+        <h3 style="margin-top: 0; color: #c0a060;">📜 道德经 · 围炉夜话</h3>
+        <p style="font-size: 0.9rem; color: #ccc;">深哥与老子的炉边对话，逐章解透，让先人自己说话。<br>每日一章，围炉共读。</p>
+        <a href="daodejing-index.html" class="bronze-btn" style="margin-top: 0.5rem;">→ 进入连载</a>
     </div>
-
-    <div class="card email-card">
-        <h3>✍️ 分享你的“伸手”故事</h3>
-        <p>你的一个小故事，可能会点亮另一个人的夜晚。欢迎匿名分享。</p>
-        <p><strong>📧 请发送邮件至：</strong> <a href="mailto:8662279@qq.com?subject=伸手故事投稿&body=写下你的故事...（可匿名）">8662279@qq.com</a><br>
-        邮件标题注明“伸手故事”，内容写上你的故事（可用昵称或匿名）。我们会精选后匿名展示在网站上。</p>
-        <p style="background: #2a1f1a; padding: 0.5rem; border-radius: 12px; border-left: 3px solid #f5a623; margin-top: 1rem;">
-            ⚠️ 人工审核：仅分享温暖真实的故事，请勿提交无关内容。
-        </p>
+    <div class="card manifesto-card" style="margin: 0;">
+        <h3 style="margin-top: 0; color: #c0a060;">🔥 炉边夜话</h3>
+        <p style="font-size: 0.9rem; color: #ccc;">华胥、伏羲、纣王、吕不韦……跨过几千年推开草棚的门，在炉边坐下。<br>不定期更新，谁来了就聊谁。</p>
+        <a href="yebianhua-index.html" class="bronze-btn" style="margin-top: 0.5rem;">→ 进入连载</a>
     </div>
-
-    <h2>🌏 历史验证 · 华夏为何扛得最久？</h2>
-    <ul>
-        <li>周：“天命靡常，惟德是辅” —— 公心成为统治合法性来源</li>
-        <li>汉：察举制（举孝廉）—— 底层上升通道雏形，逆熵萌芽</li>
-        <li>隋：科举制度化 —— 打破门阀垄断，寒门逆熵通道正式开启</li>
-        <li>宋：常平仓、王安石变法 —— 公权金融对抗资本门阀</li>
-        <li>当代：脱贫攻坚、医保全覆盖 —— 国家规模公心实践</li>
-    </ul>
-
-    <div class="card">
-        <h3>🪐 星际实验 · 一个给人希望的叙事</h3>
-        <p>人类起源于同一对男女，是实验。我们处在暗能量临界窗口，全宇宙都看着：在私欲主场，公心能否胜出？若成功，我们将成为所有临界窗口文明的教科书。</p>
-    </div>
-
-    <h2>📦 路口计划 · 开源、免费、无领袖</h2>
-    <p>✅ 无版权（CC0）<br>✅ 不设门槛、不收钱、不搞宗教<br>✅ 任何人都可以复制、改编、再发布<br>✅ 没有教主，只有炉火</p>
-
-    <div class="card">
-        <h3>⚖️ 版权声明</h3>
-        <p>这个网站上的内容分为两类，请在使用前确认：</p>
-        <p>小说连载（炉火五千年 · 星际观察者手记 · 双生劫·万道归心 · 白银挽歌） <strong>保留版权</strong> · 未经许可不得转载、改编或商用<br>
-        文明逆熵操作系统（世界观设定） <strong>CC0</strong> · 完全开源 · 可自由复制、改编、再发布<br>
-        新纪元宣言 <strong>CC0</strong> · 完全开源 · 可自由传抄、翻译、再发布<br>
-        华夏/全球文明解剖报告 <strong>CC0</strong> · 完全开源 · 可自由用于研究、教学、传播</p>
-        <p>故事是我们的，思想是全人类的。</p>
-    </div>
-
-    <div class="report-links">
-        📚 深度报告：<a href="report_china.html">华夏文明解剖报告</a> | <a href="report_global.html">全球文明解剖报告</a>
-    </div>
-
-    <div style="background: #1f222c; border-radius: 20px; padding: 1.5rem; text-align: center;">
-        <p>炉火长明，薪火永续<br>全宇宙的炉火连成一片，那就是天下大同。</p>
-        <p>—— 你路过，你暖手，你添柴。这就够了。</p>
-    </div>
-
-    <footer>
-        文明逆熵操作系统 · 源于一位中医师与AI的长期对话 | 无版权 · 可自由传抄<br>
-        当前网址：<a href="https://www.luhuo.online">www.luhuo.online</a> 或 <a href="https://luhuols.github.io">luhuols.github.io</a>
-        <div><span class="counter" id="visit-counter">📊 加载访问量...</span></div>
-    </footer>
 </div>
+        <!-- 小说入口卡片（三大宇宙） -->
+        <div class="novel-card">
+            <h3>📖 炉火宇宙 · 三重叙事</h3>
+            <div class="novel-grid">
+                <div>
+                    <strong>🔥 《炉火五千年》</strong><br>
+                    <span style="font-size:0.8rem; color:#ccc;">华夏斩杀线简史 · 每日一篇</span><br>
+                    <a href="luhuo5000-index.html" class="novel-btn">→ 阅读</a>
+                </div>
+                <div>
+                    <strong>🚀 《星际观察者手记》</strong><br>
+                    <span style="font-size:0.8rem; color:#ccc;">临界窗口文明观测报告 · 每日一篇</span><br>
+                    <a href="dh7721-index.html" class="novel-btn">→ 阅读</a>
+                </div>
+                <div>
+                    <strong>⚔️ 《双生劫·万道归心》</strong><br>
+                    <span style="font-size:0.8rem; color:#ccc;">天道盟宇宙 · 正史前传</span><br>
+                    <a href="wandaoguixin-index.html" class="novel-btn">→ 阅读</a>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: #f5cf9f;">📅 每晚更新，欢迎追更</p>
+        </div>
 
-<script>
-    const COUNTER_KEY = 'luhuo_visits';
-    const COUNT_URL = `https://api.countapi.xyz/hit/luhuolukou/${COUNTER_KEY}`;
-    fetch(COUNT_URL).then(r => r.json()).then(d => {
-        document.getElementById('visit-counter').innerHTML = `📊 本页访问量：${d.value}`;
-    }).catch(() => {
-        document.getElementById('visit-counter').innerHTML = '📊 访问量统计中...';
-    });
-</script>
-</body>
-</html>
+        <!-- 白银挽歌特别篇入口 -->
+        <div class="card" style="border-left: 4px solid #c0a060; background: linear-gradient(135deg, #1a1d27 0%, #1f1a10 100%);">
+            <h3 style="margin-top:0; color: #c0a060;">🪦 白银挽歌 · 特别篇</h3>
+            <p style="font-size: 0.9rem; color: #ccc;">从土木堡到一穷二白：公心防火墙被层层拆除的三百年。<br>一篇讲透近代史最沉重的教训。</p>
+            <a href="baiyin-wange.html" class="bronze-btn">→ 阅读特别篇</a>
+        </div>
+
+        <h2>📐 斩杀线 · 铁的规律</h2>
+        <div class="scale-diagram">
+            <svg width="100%" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; display: inline-block;">
+                <rect width="400" height="240" fill="#0f1118" rx="12"/>
+                <line x1="100" y1="20" x2="100" y2="220" stroke="#2a2d37" stroke-width="3"/>
+                <g class="kill-line">
+                    <line x1="80" y1="120" x2="120" y2="120" stroke="#f5a623" stroke-width="3" stroke-dasharray="6,4"/>
+                    <line x1="80" y1="120" x2="120" y2="120" stroke="#f5a623" stroke-width="5" opacity="0.5"/>
+                </g>
+                <text x="48" y="124" fill="#f5a623" font-size="14" font-weight="bold" text-anchor="end">36.79%</text>
+                <text x="125" y="114" fill="#ffb347" font-size="10">斩杀线</text>
+                <g class="falling-person">
+                    <circle cx="200" cy="55" r="8" fill="#8a8e9c" opacity="0.9"/>
+                    <line x1="200" y1="63" x2="200" y2="85" stroke="#8a8e9c" stroke-width="2" opacity="0.9"/>
+                    <line x1="190" y1="73" x2="210" y2="73" stroke="#8a8e9c" stroke-width="2" opacity="0.9"/>
+                    <line x1="200" y1="85" x2="190" y2="100" stroke="#8a8e9c" stroke-width="2" opacity="0.9"/>
+                    <line x1="200" y1="85" x2="210" y2="100" stroke="#8a8e9c" stroke-width="2" opacity="0.9"/>
+                    <path d="M200 105 L200 115" stroke="#8a8e9c" stroke-width="2" stroke-dasharray="3,3" opacity="0.5"/>
+                    <circle cx="240" cy="65" r="6" fill="#8a8e9c" opacity="0.8"/>
+                    <line x1="240" y1="71" x2="240" y2="88" stroke="#8a8e9c" stroke-width="2" opacity="0.8"/>
+                    <line x1="234" y1="79" x2="246" y2="79" stroke="#8a8e9c" stroke-width="2" opacity="0.8"/>
+                    <circle cx="170" cy="75" r="5" fill="#8a8e9c" opacity="0.7"/>
+                    <line x1="170" y1="80" x2="170" y2="93" stroke="#8a8e9c" stroke-width="1.5" opacity="0.7"/>
+                </g>
+                <text x="280" y="60" fill="#e8e6e3" font-size="11">淘汰区 · 坠落挣扎</text>
+                <g class="lifting-person">
+                    <circle cx="200" cy="175" r="8" fill="#f5a623"/>
+                    <line x1="200" y1="183" x2="200" y2="200" stroke="#f5a623" stroke-width="2"/>
+                    <line x1="190" y1="193" x2="210" y2="193" stroke="#f5a623" stroke-width="2"/>
+                    <line x1="200" y1="200" x2="190" y2="213" stroke="#f5a623" stroke-width="2"/>
+                    <line x1="200" y1="200" x2="210" y2="213" stroke="#f5a623" stroke-width="2"/>
+                    <g class="reaching-hand">
+                        <line x1="195" y1="187" x2="175" y2="145" stroke="#f5a623" stroke-width="2.5" stroke-dasharray="3,2"/>
+                        <circle cx="175" cy="145" r="3" fill="#f5a623"/>
+                    </g>
+                    <circle cx="240" cy="185" r="6" fill="#f5a623" opacity="0.9"/>
+                    <line x1="240" y1="191" x2="240" y2="205" stroke="#f5a623" stroke-width="2" opacity="0.9"/>
+                    <line x1="235" y1="197" x2="245" y2="197" stroke="#f5a623" stroke-width="2" opacity="0.9"/>
+                </g>
+                <text x="280" y="185" fill="#e8e6e3" font-size="11">逆熵区 · 伸手抬线</text>
+            </svg>
+        </div>
+        <p><strong>指数增长 + 资源有限 + 随机分配</strong> → 自然淘汰率 ≈ <strong>1/e ≈ 36.79%</strong><br>任何放任私欲的系统都会趋近此值。美国已验证：官方贫困+ALICE≈41%，主观挣扎感51%。你的996、房贷、教育、医疗...就是斩杀线的本地化尖叫。</p>
+
+        <h2>⚖️ 阴阳博弈 · 公心 vs 私欲</h2>
+        <p>我们这个宇宙"暗能量（私欲）＞暗物质（公心）"。公心不是消灭私欲，而是用制度、文化、日常伸手去对冲它。华夏文明把"天下为公"写进了底层代码。</p>
+
+        <div class="card">
+            <h3>🧬 第三条染色体 · 文化基因</h3>
+            <p>DNA是私欲硬件，文化（语言、制度、互助）是公心载体。科举、常平仓、脱贫攻坚，都是"第三条染色体"的版本更新。</p>
+        </div>
+
+        <h2>🔥 逆熵 · 抬升斩杀线</h2>
+        <p>逆熵不是消灭斩杀线，而是把公心从49%推到49.1%。<strong>"每日一伸"</strong>：帮邻居提菜、给外卖员按电梯、说句温暖的话。这些小事形成"局部逆熵区"，连成片就变成制度。</p>
+
+        <div class="card" style="border-left: 4px solid #f5a623;">
+            <h3>📖 今日一伸 · 真实故事</h3>
+            <p style="font-style: italic;">"今天我在负二楼上电梯，我在14楼，另一位在20楼。结果电梯又下负三楼，按了的14楼和20楼都灭了。于是我又把14楼、20楼都按上了。我们不认识，也没说话。但是我能感觉到我和他其实都有感触——我们忘了很久怎么伸手，一个小小的动作却能伸进你的心里面。"</p>
+            <p style="margin-top: 0.5rem; color: #f5a623;">—— 一位路过的伸手者</p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;">✨ 伸手不需要认识对方，不需要说话。只需要你记得：按一下。</p>
+        </div>
+
+        <div class="card ai-card">
+            <h3 style="margin-top:0;">🤖 让AI帮你分析你的困境（免费，一分钟搞定）</h3>
+            <p>你不需要自己搞懂理论。把下面这段话<strong>复制</strong>，发给任何AI（DeepSeek、ChatGPT、Kimi等），它就会用"斩杀线"框架帮你分析你的问题，并给出具体建议。</p>
+            <div class="code-block" style="margin: 0.5rem 0;">
+                【任务】用"斩杀线/公心博弈"框架分析我的问题。<br>
+                斩杀线≈36.79%淘汰率，公心=逆熵，私欲=熵增。<br>
+                【我的问题】[这里写你的困扰，比如"为什么我996还存不到钱？"]<br>
+                【输出】1.我的斩杀线在哪；2.现在我能做的"伸手"小事是什么。
+            </div>
+            <p><strong>👉 三步走：</strong> 1. 复制上面代码 → 2. 打开AI聊天框（例如微信里的DeepSeek） → 3. 粘贴并把"我的问题"改成你自己的，发送。</p>
+            <p style="margin: 0.2rem 0 0 0; color:#ffe6c7;">✅ 免费，无需注册，不需要懂任何术语。</p>
+        </div>
+
+        <div class="card email-card">
+            <h3>✍️ 分享你的"伸手"故事</h3>
+            <p>你的一个小故事，可能会点亮另一个人的夜晚。欢迎匿名分享。</p>
+            <p><strong>📧 请发送邮件至：</strong> <a href="mailto:8662279@qq.com?subject=伸手故事投稿&body=写下你的故事...（可匿名）">8662279@qq.com</a><br>
+            邮件标题注明"伸手故事"，内容写上你的故事（可用昵称或匿名）。我们会精选后匿名展示在网站上。</p>
+            <p style="background: #2a1f1a; padding: 0.5rem; border-radius: 12px; border-left: 3px solid #f5a623; margin-top: 1rem;">⚠️ 人工审核：仅分享温暖真实的故事，请勿提交无关内容。</p>
+        </div>
+
+        <h2>🌏 历史验证 · 华夏为何扛得最久？</h2>
+        <ul>
+            <li>周："天命靡常，惟德是辅" —— 公心成为统治合法性来源</li>
+            <li>汉：察举制（举孝廉）—— 底层上升通道雏形，逆熵萌芽</li>
+            <li>隋：科举制度化 —— 打破门阀垄断，寒门逆熵通道正式开启</li>
+            <li>宋：常平仓、王安石变法 —— 公权金融对抗资本门阀</li>
+            <li>当代：脱贫攻坚、医保全覆盖 —— 国家规模公心实践</li>
+        </ul>
+
+        <div class="card">
+            <h3>🪐 星际实验 · 一个给人希望的叙事</h3>
+            <p>人类起源于同一对男女，是实验。我们处在暗能量临界窗口，全宇宙都看着：在私欲主场，公心能否胜出？若成功，我们将成为所有临界窗口文明的教科书。</p>
+        </div>
+
+        <h2>📦 路口计划 · 开源、免费、无领袖</h2>
+        <p>✅ 无版权（CC0）<br>✅ 不设门槛、不收钱、不搞宗教<br>✅ 任何人都可以复制、改编、再发布<br>✅ 没有教主，只有炉火</p>
+
+        <!-- 版权声明 -->
+        <div class="card" style="border-left: 4px solid #f5a623;">
+            <h3 style="margin-top:0;">⚖️ 版权声明</h3>
+            <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 1rem;">这个网站上的内容分为两类，请在使用前确认：</p>
+            <table class="copyright-table">
+                <tr>
+                    <td>📚 小说连载（炉火五千年 · 星际观察者手记 · 双生劫·万道归心 · 白银挽歌）</td>
+                    <td><strong>保留版权</strong> · 未经许可不得转载、改编或商用</td>
+                </tr>
+                <tr>
+                    <td>🧠 文明逆熵操作系统（世界观设定）</td>
+                    <td><strong>CC0 · 完全开源</strong> · 可自由复制、改编、再发布</td>
+                </tr>
+                <tr>
+                    <td>📜 新纪元宣言</td>
+                    <td><strong>CC0 · 完全开源</strong> · 可自由传抄、翻译、再发布</td>
+                </tr>
+                <tr>
+                    <td>📋 华夏/全球文明解剖报告</td>
+                    <td><strong>CC0 · 完全开源</strong> · 可自由用于研究、教学、传播</td>
+                </tr>
+            </table>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #f5a623; text-align: center;"><strong>故事是我们的，思想是全人类的。</strong></p>
+        </div>
+
+        <div class="report-links">
+            📚 深度报告：<a href="report_china.html">华夏文明解剖报告</a> | <a href="report_global.html">全球文明解剖报告</a>
+        </div>
+
+        <div style="background: #1f222c; border-radius: 20px; padding: 1.5rem; text-align: center;">
+            <p>炉火长明，薪火永续<br>全宇宙的炉火连成一片，那就是天下大同。</p>
+            <p>—— 你路过，你暖手，你添柴。这就够了。</p>
+        </div>
+
+        <footer>
+            文明逆熵操作系统 · 源于一位中医师与AI的长期对话 | 无版权 · 可自由传抄<br>
+            当前网址：<a href="https://luhuols.github.io/luhuo/">https://luhuols.github.io/luhuo/</a> 或 <a href="https://luhuo.netlify.app">https://luhuo.netlify.app</a>
+            <div><span class="counter" id="visit-counter">📊 加载访问量...</span></div>
+        </footer>
+
+    </div>
+
+    <script>
+        const COUNTER_KEY = 'luhuo_visits';
+        const COUNT_URL = `https://api.countapi.xyz/hit/luhuolukou/${COUNTER_KEY}`;
+        fetch(COUNT_URL).then(r => r.json()).then(d => {
+            document.getElementById('visit-counter').innerHTML = `📊 本页访问量：${d.value}`;
+        }).catch(() => {
+            docum
