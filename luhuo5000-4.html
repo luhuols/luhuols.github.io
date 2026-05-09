@@ -1,209 +1,716 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>炉火五千年 · 第4集 · 炉火路口</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background-color: #0a0c12; color: #e8e6e3; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', serif; line-height: 1.7; padding: 2rem 1rem; padding-bottom: 5rem; }
-.container { max-width: 880px; margin: 0 auto; background: #0f1118; border-radius: 32px; padding: 2rem; border: 1px solid #2a2d37; }
-h1 { font-size: 2rem; margin-bottom: 0.25rem; }
-h1 small { font-size: 0.9rem; color: #f5a623; display: block; margin-top: 0.5rem; }
-.sub { color: #aaa; border-left: 3px solid #f5a623; padding-left: 1rem; margin: 1rem 0 2rem; }
-.episode { background: #13161f; border-radius: 20px; padding: 1.5rem; margin: 1.5rem 0; border: 1px solid #2a2d37; }
-.episode p { margin-bottom: 1.2rem; }
-.episode-meta { color: #f5a623; margin-bottom: 0.8rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
-.section-title { color: #f5a623; font-weight: bold; margin: 2rem 0 0.5rem; font-size: 1.1rem; border-bottom: 1px solid #2a2d37; padding-bottom: 0.3rem; }
-.pullquote { background: #1a1f2e; border-left: 4px solid #f5a623; padding: 1rem 1.5rem; margin: 1.5rem 0; border-radius: 0 12px 12px 0; color: #ddd; }
-footer { margin-top: 3rem; text-align: center; font-size: 0.8rem; color: #6a6e7c; border-top: 1px solid #21242e; padding-top: 1.5rem; }
-a { color: #f5a623; text-decoration: none; }
-.back-link { display: inline-block; margin-bottom: 1rem; background: #1e212b; padding: 0.3rem 1rem; border-radius: 30px; font-size: 0.9rem; }
-.episode-nav { display: flex; justify-content: space-between; margin: 1.5rem 0; }
-.episode-nav a { background: #1e212b; padding: 0.4rem 1.2rem; border-radius: 30px; font-size: 0.9rem; }
-.update-note { background: #2a1f1a; padding: 0.5rem; border-radius: 12px; text-align: center; margin: 1rem 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>炉火五千年 · 第4集 · 炉火路口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* 朗读控制条 */
-.tts-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #0f1118; border-top: 1px solid #2a2d37; padding: 0.8rem 1.5rem; display: flex; align-items: center; gap: 1rem; z-index: 1000; flex-wrap: wrap; justify-content: center; }
-.tts-btn { background: #c0a060; color: #0a0c12; border: none; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 0.9rem; transition: 0.2s; white-space: nowrap; }
-.tts-btn:hover { background: #d4b87a; }
-.tts-btn.playing { background: #8b0000; color: #e8e6e3; }
-.tts-speed { display: flex; align-items: center; gap: 0.5rem; color: #aaa; font-size: 0.85rem; white-space: nowrap; }
-.tts-speed input[type="range"] { width: 80px; accent-color: #c0a060; }
-.tts-status { color: #6a6e7c; font-size: 0.8rem; white-space: nowrap; }
+        body {
+            background-color: #0a0c12;
+            color: #e8e6e3;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
 
-@media (max-width: 640px) { body { padding: 1rem 0.5rem 5rem 0.5rem; } .container { padding: 1.2rem; } .tts-bar { padding: 0.6rem 1rem; gap: 0.5rem; } .tts-btn { padding: 0.4rem 0.8rem; font-size: 0.8rem; } }
-</style>
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #0f1118;
+            border-radius: 32px;
+            padding: 2rem;
+            border: 1px solid #2a2d37;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        h1 small {
+            font-size: 0.9rem;
+            color: #f5a623;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .sub {
+            color: #aaa;
+            border-left: 3px solid #f5a623;
+            padding-left: 1rem;
+            margin: 1rem 0 2rem;
+        }
+
+        .episode {
+            background: #13161f;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #2a2d37;
+            position: relative;
+        }
+
+        .episode p {
+            margin-bottom: 1.2rem;
+        }
+
+        .episode-meta {
+            color: #f5a623;
+            margin-bottom: 0.8rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            color: #f5a623;
+            font-weight: bold;
+            margin: 2rem 0 0.5rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #2a2d37;
+            padding-bottom: 0.3rem;
+        }
+
+        .pullquote {
+            background: #1a1f2e;
+            border-left: 4px solid #f5a623;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 12px 12px 0;
+            color: #ddd;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a6e7c;
+            border-top: 1px solid #21242e;
+            padding-top: 1.5rem;
+        }
+
+        a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            background: #1e212b;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .back-link:hover {
+            background: #2a2d37;
+        }
+
+        .episode-nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .episode-nav a {
+            background: #1e212b;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .episode-nav a:hover {
+            background: #2a2d37;
+        }
+
+        .update-note {
+            background: #2a1f1a;
+            padding: 0.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        /* ========== 朗读控制栏样式 ========== */
+        .read-aloud-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #181c28;
+            border: 1px solid #2a2d37;
+            border-radius: 30px;
+            padding: 0.45rem 1rem 0.45rem 0.7rem;
+            margin-bottom: 1.2rem;
+            position: sticky;
+            top: 0.5rem;
+            z-index: 10;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            flex-wrap: nowrap;
+        }
+
+        .read-aloud-bar.is-playing {
+            border-color: #f5a623;
+            box-shadow: 0 0 16px rgba(245, 166, 35, 0.25);
+        }
+
+        .read-aloud-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 2px solid #f5a623;
+            background: transparent;
+            color: #f5a623;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.25s;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            position: relative;
+        }
+
+        .read-aloud-btn:hover {
+            background: rgba(245, 166, 35, 0.12);
+            transform: scale(1.04);
+        }
+
+        .read-aloud-btn:active {
+            background: rgba(245, 166, 35, 0.22);
+            transform: scale(0.96);
+        }
+
+        .read-aloud-btn.is-active {
+            background: #f5a623;
+            color: #0f1118;
+            animation: breathe 2s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%,
+            100% {
+                box-shadow: 0 0 8px rgba(245, 166, 35, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 22px rgba(245, 166, 35, 0.75);
+            }
+        }
+
+        .read-aloud-btn svg {
+            display: block;
+            pointer-events: none;
+        }
+
+        .read-aloud-stop-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1.5px solid #6a6e7c;
+            background: transparent;
+            color: #6a6e7c;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.2s;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.7);
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+        }
+
+        .read-aloud-stop-btn.is-visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+
+        .read-aloud-stop-btn:hover {
+            border-color: #e07050;
+            color: #e07050;
+            background: rgba(224, 112, 80, 0.1);
+        }
+
+        .read-aloud-stop-btn:active {
+            background: rgba(224, 112, 80, 0.2);
+            transform: scale(0.9);
+        }
+
+        .read-aloud-stop-btn svg {
+            display: block;
+            pointer-events: none;
+        }
+
+        .read-aloud-label {
+            font-size: 0.85rem;
+            color: #aaa;
+            white-space: nowrap;
+            user-select: none;
+            transition: color 0.3s;
+        }
+
+        .read-aloud-bar.is-playing .read-aloud-label {
+            color: #f5a623;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 500px) {
+            .read-aloud-bar {
+                padding: 0.4rem 0.8rem 0.4rem 0.5rem;
+                gap: 0.4rem;
+                border-radius: 26px;
+                top: 0.25rem;
+            }
+            .read-aloud-btn {
+                width: 38px;
+                height: 38px;
+            }
+            .read-aloud-stop-btn {
+                width: 28px;
+                height: 28px;
+            }
+            .read-aloud-label {
+                font-size: 0.78rem;
+            }
+            .episode {
+                padding: 1rem;
+            }
+            .container {
+                padding: 1.2rem;
+                border-radius: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<a href="luhuo5000-index.html" class="back-link">← 返回连载目录</a>
-<h1>炉火五千年 <small>华夏斩杀线简史</small></h1>
-<div class="sub">以斩杀线、公心、资本门阀重写华夏五千年 · 每日更新</div>
-<div class="update-note">📖 第4集已更新 · 盛世底下，金权从未离开</div>
+    <div class="container">
+        <a href="luhuo5000-index.html" class="back-link">← 返回连载目录</a>
+        <h1>炉火五千年 <small>华夏斩杀线简史</small></h1>
+        <div class="sub">以斩杀线、公心、资本门阀重写华夏五千年 · 每日更新</div>
+        <div class="update-note">📖 第4集已更新 · 盛世底下，金权从未离开</div>
 
-<div class="episode">
-<div class="episode-meta">第四篇 · 开天盛世的虚华</div>
+        <div class="episode" id="episode-content">
+            <div class="episode-meta">第四篇 · 开天盛世的虚华</div>
 
-<div class="section-title">一、先天之变</div>
-<p>公元710年，临淄王李隆基在隆庆池畔点起了兵。韦后乱政，毒杀中宗，天下震动。他率兵入宫，一夜之间铲除韦氏。两年后，太平公主图谋废立，他再度出手——先天政变，赐死姑母，逼退父亲睿宗，于公元713年正式亲政，改元开元。</p>
-<p>二十九岁，三场政变，一双手沾满亲族的血。朝堂上的大臣们跪在地上，不敢抬头，分不清他是明君还是暴君，只知道他能杀人。但他不杀了。他杀够了。他要盛世。</p>
+            <!-- ========== 朗读控制栏 ========== -->
+            <div class="read-aloud-bar" id="readAloudBar">
+                <button class="read-aloud-btn" id="readAloudPlayBtn" aria-label="朗读本集内容" title="朗读本集">
+                    <!-- 播放图标 -->
+                    <svg id="iconPlay" viewBox="0 0 24 24" width="20" height="20">
+                        <polygon points="7,4 20,12 7,20" fill="currentColor" />
+                    </svg>
+                    <!-- 暂停图标（初始隐藏） -->
+                    <svg id="iconPause" viewBox="0 0 24 24" width="20" height="20" style="display:none;">
+                        <rect x="5" y="3" width="5" height="18" rx="1" fill="currentColor" />
+                        <rect x="14" y="3" width="5" height="18" rx="1" fill="currentColor" />
+                    </svg>
+                </button>
+                <button class="read-aloud-stop-btn" id="readAloudStopBtn" aria-label="停止朗读" title="停止朗读">
+                    <svg viewBox="0 0 24 24" width="14" height="14">
+                        <rect x="5" y="5" width="14" height="14" rx="2.5" fill="currentColor" />
+                    </svg>
+                </button>
+                <span class="read-aloud-label" id="readAloudLabel">朗读本集</span>
+            </div>
+            <!-- ========== 朗读控制栏结束 ========== -->
 
-<div class="section-title">二、姚崇的答卷</div>
-<p>他找来了姚崇。姚崇是武周旧臣，三朝老吏，此时已六十三岁，满手是老茧——不是握锄头的茧，是握笔的茧。他在文书堆里泡了一辈子，知道天下是怎么运转的——不是靠口号，是靠账本。</p>
-<p>玄宗问他要怎么治国。姚崇不跪，开口提了十件事：废严刑，行仁政；息兵休战，不贪边功；宦官不得干政；皇亲国戚不得任要害官；近臣犯法与民同罪；租赋之外不得加征；禁绝佛寺道观营造；礼遇大臣，不因言治罪；纳谏如流；外戚不得干政。玄宗说，好。姚崇又说，有一条做不到，臣不做这个宰相。玄宗说，都做得到。这十条诉求，被后世称为"十事要说"，司马光在《资治通鉴》中赞叹不已，毛泽东在读《新唐书·姚崇传》时批注："如此简单明了的十条政治纲领，古今少见。"</p>
-<p>姚崇上任第一年，太庙倒塌。朝堂上议论纷纷：这是天降灾异，宰相该引咎辞职。姚崇说：太庙是年久失修，跟天意无关。玄宗听他的，太庙重修，姚崇继续执政。</p>
-<p>开元四年，山东大蝗。百姓烧香叩头，坐视蝗虫食苗，不敢捕杀。姚崇说，这不是天灾，是虫灾——虫能吃，就能灭。他下令夜中设火，火边掘大坑，焚瘞兼施，并派御史分道督促。汴州刺史倪若水抗命不捕，还上书说蝗虫是天灾，非人力可除。姚崇一句话顶回去：你说修德可以消灾，那你管的地方蝗虫最多，是不是你无德？倪若水不敢再辩，只得组织捕蝗，一夕之间捕得蝗虫十四万石。</p>
-<p>群臣议论不休，连玄宗也开始动摇。姚崇说：陛下，蝗虫吃的是百姓的命。百姓没有粮，就没有赋税。没有赋税，就没有大唐。玄宗不再犹豫，准他继续。那年秋天，山东诸州虽遭蝗灾，"是岁田收有获，人不甚饥"。</p>
-<p>姚崇只当了三年多宰相，但"十事要说"的十条纲领铺开了开元之治的底子。史称"救时宰相"。</p>
+            <div class="section-title">一、先天之变</div>
+            <p>公元710年，临淄王李隆基在隆庆池畔点起了兵。韦后乱政，毒杀中宗，天下震动。他率兵入宫，一夜之间铲除韦氏。两年后，太平公主图谋废立，他再度出手——先天政变，赐死姑母，逼退父亲睿宗，于公元713年正式亲政，改元开元。[reference:0]</p>
+            <p>二十九岁，三场政变，一双手沾满亲族的血。朝堂上的大臣们跪在地上，不敢抬头，分不清他是明君还是暴君，只知道他能杀人。但他不杀了。他杀够了。他要盛世。</p>
 
-<div class="section-title">三、宋璟的尺子</div>
-<p>姚崇之后，继任者是宋璟。宋璟与姚崇不同——姚崇善谋，宋璟善守。司马光评二人："崇善应变成务，璟善守法持正；二人志操不同，然协心辅佐，使赋役宽平，刑罚清省，百姓富庶。"</p>
-<p>宋璟执法的尺度很硬。有地方官为了献媚进贡珍宝，他路上一律拦下来。有官员给他送礼，他原封不动地退回。玄宗对他又敬又惮——有时候不想听他的话，但知道他说的都对。朝野称誉他为"有脚阳春"——走到哪里，阳春就在哪里。到任广州都督时，当地人要为宋璟立碑，他坚决推辞，说：我做官是本分，立碑是虚名。</p>
-<p>他在任上做了一件极要紧的事：整饬恶钱。当时私铸铜钱成风，商人用劣钱兑换好钱，钱法大乱，物价飞涨。宋璟颁令严禁私铸，违者没官，家属充军。结果触动了权贵的利益，屡遭弹劾，最终罢相。</p>
-<p>宋璟禁私钱的失败，不是因为政策不好。张说回来了。张九龄上来了。开元盛世的光，亮到了最盛处——杜甫后来写：忆昔开元全盛日，小邑犹藏万家室。稻米流脂粟米白，公私仓廪俱丰实。</p>
+            <div class="section-title">二、姚崇的答卷</div>
+            <p>他找来了姚崇。姚崇是武周旧臣，三朝老吏，此时已六十三岁，满手是老茧——不是握锄头的茧，是握笔的茧。他在文书堆里泡了一辈子，知道天下是怎么运转的——不是靠口号，是靠账本。</p>
+            <p>玄宗问他要怎么治国。姚崇不跪，开口提了十件事：废严刑，行仁政；息兵休战，不贪边功；宦官不得干政；皇亲国戚不得任要害官；近臣犯法与民同罪；租赋之外不得加征；禁绝佛寺道观营造；礼遇大臣，不因言治罪；纳谏如流；外戚不得干政。[reference:1]玄宗说，好。姚崇又说，有一条做不到，臣不做这个宰相。玄宗说，都做得到。这十条诉求，被后世称为"十事要说"，司马光在《资治通鉴》中赞叹不已，毛泽东在读《新唐书·姚崇传》时批注："如此简单明了的十条政治纲领，古今少见。"[reference:2]</p>
+            <p>姚崇上任第一年，太庙倒塌。朝堂上议论纷纷：这是天降灾异，宰相该引咎辞职。姚崇说：太庙是年久失修，跟天意无关。玄宗听他的，太庙重修，姚崇继续执政。[reference:3]</p>
+            <p>开元四年，山东大蝗。百姓烧香叩头，坐视蝗虫食苗，不敢捕杀。姚崇说，这不是天灾，是虫灾——虫能吃，就能灭。他下令夜中设火，火边掘大坑，焚瘞兼施，并派御史分道督促。[reference:4]汴州刺史倪若水抗命不捕，还上书说蝗虫是天灾，非人力可除。姚崇一句话顶回去：你说修德可以消灾，那你管的地方蝗虫最多，是不是你无德？倪若水不敢再辩，只得组织捕蝗，一夕之间捕得蝗虫十四万石。[reference:5]</p>
+            <p>群臣议论不休，连玄宗也开始动摇。姚崇说：陛下，蝗虫吃的是百姓的命。百姓没有粮，就没有赋税。没有赋税，就没有大唐。玄宗不再犹豫，准他继续。那年秋天，山东诸州虽遭蝗灾，"是岁田收有获，人不甚饥"。[reference:6]</p>
+            <p>姚崇只当了三年多宰相，但"十事要说"的十条纲领铺开了开元之治的底子。史称"救时宰相"。[reference:7]</p>
 
-<div class="section-title">四、金网的潜织</div>
-<p>但长安城里，没有人注意到一些细微的变化。商人的柜坊开在东西两市，收钱放贷，存取自由——这是中国最早的银行雏形，比欧洲早了几百年。进奏院——各地节度使和州府驻京的办事处——开始为商人提供飞钱业务：你把铜钱存入长安的进奏院，拿一张纸券，到原籍的对应机构凭券取钱。钱不需要搬，纸可以飞。这就是最早的汇兑，也是最早的资本流转通道。</p>
-<p>进奏院掌握着信息——各地粮价、盐价、军需、漕运，他们的信使比朝廷的驿马还快。柜坊掌握着资本——商人不必再背着铜钱翻山越岭，一张纸券就能调动千里之外的财富。飞钱让铜钱流动得更快，快到官府追不上它的影子。</p>
-<p>公的绳在经济上收紧了，私的头在资本上张开了嘴。柜坊和飞钱本身不是坏事——它们便利了商业，繁荣了市场。但它们也为饕餮备好了一副新的牙床。当钱可以在纸上飞的时候，钱的主人也学会了在权力之间飞。后来的节度使、宦官、朝臣，都会把自己的钱存进柜坊、换成飞钱——不是方便做生意，是方便藏。</p>
-<p>金网潜织。朝堂上的百官还在为姚崇和宋璟的政绩喝彩，而东市和西市的商人们已经在用进奏院的牒券完成大额汇兑。没有人察觉——或许有人察觉了，但盛世的歌舞声太响，压住了一切细微的裂痕。</p>
+            <div class="section-title">三、宋璟的尺子</div>
+            <p>姚崇之后，继任者是宋璟。宋璟与姚崇不同——姚崇善谋，宋璟善守。司马光评二人："崇善应变成务，璟善守法持正；二人志操不同，然协心辅佐，使赋役宽平，刑罚清省，百姓富庶。"[reference:8]</p>
+            <p>宋璟执法的尺度很硬。有地方官为了献媚进贡珍宝，他路上一律拦下来。有官员给他送礼，他原封不动地退回。玄宗对他又敬又惮——有时候不想听他的话，但知道他说的都对。朝野称誉他为"有脚阳春"——走到哪里，阳春就在哪里。到任广州都督时，当地人要为宋璟立碑，他坚决推辞，说：我做官是本分，立碑是虚名。[reference:9]</p>
+            <p>他在任上做了一件极要紧的事：整饬恶钱。当时私铸铜钱成风，商人用劣钱兑换好钱，钱法大乱，物价飞涨。宋璟颁令严禁私铸，违者没官，家属充军。结果触动了权贵的利益，屡遭弹劾，最终罢相。[reference:10]</p>
+            <p>宋璟禁私钱的失败，不是因为政策不好。张说回来了。张九龄上来了。开元盛世的光，亮到了最盛处——杜甫后来写：忆昔开元全盛日，小邑犹藏万家室。稻米流脂粟米白，公私仓廪俱丰实。[reference:11]</p>
 
-<div class="section-title">五、杨慎矜的眼</div>
-<p>但有一双眼睛还没有闭上。杨慎矜，监察御史，杨崇礼的儿子。杨崇礼在太府寺管了二十年的国库，一寸一缕都亲自核验，时人说他苛刻。杨慎矜继承了父亲的苛刻。他坐在太府寺的库房里，陪着年迈的父亲翻账本。账本上记着天下赋税，钱帛粮食堆积如山。</p>
-<p>可他看到了另一层。他看到了国库里的每一匹绢、每一斗米都有来历，但他看不到那些流入进奏院的钱去了哪里，看不到柜坊里寄存的财富归在谁的名下，看不到私商发行的飞钱背后沉淀着多少不交税的利润。公的账，他翻烂了。私的账，他一页都摸不到。</p>
-<p>那个总在人前谈礼尚德行的张说，在私下里究竟聚敛了多少？那个整天把天下兴亡挂在嘴边的张九龄，他的家族又做着怎样的买卖？他心里有数，只是不敢打开潘多拉的魔盒。他隐隐感觉到，这个盛世最繁荣的地方，正是裂缝最深的起点。他听到国库的账本上，除了百姓的汗味，还有一种他叫不出名字的腥味——金权的腥味。</p>
-<p>金网已经织好。饕餮闻到了盛世的香味。</p>
+            <div class="section-title">四、金网的潜织</div>
+            <p>但长安城里，没有人注意到一些细微的变化。商人的柜坊开在东西两市，收钱放贷，存取自由——这是中国最早的银行雏形，比欧洲早了几百年。[reference:12][reference:13]进奏院——各地节度使和州府驻京的办事处——开始为商人提供飞钱业务：你把铜钱存入长安的进奏院，拿一张纸券，到原籍的对应机构凭券取钱。钱不需要搬，纸可以飞。这就是最早的汇兑，也是最早的资本流转通道。[reference:14]</p>
+            <p>进奏院掌握着信息——各地粮价、盐价、军需、漕运，他们的信使比朝廷的驿马还快。柜坊掌握着资本——商人不必再背着铜钱翻山越岭，一张纸券就能调动千里之外的财富。飞钱让铜钱流动得更快，快到官府追不上它的影子。</p>
+            <p>公的绳在经济上收紧了，私的头在资本上张开了嘴。柜坊和飞钱本身不是坏事——它们便利了商业，繁荣了市场。但它们也为饕餮备好了一副新的牙床。当钱可以在纸上飞的时候，钱的主人也学会了在权力之间飞。后来的节度使、宦官、朝臣，都会把自己的钱存进柜坊、换成飞钱——不是方便做生意，是方便藏。</p>
+            <p>金网潜织。朝堂上的百官还在为姚崇和宋璟的政绩喝彩，而东市和西市的商人们已经在用进奏院的牒券完成大额汇兑。没有人察觉——或许有人察觉了，但盛世的歌舞声太响，压住了一切细微的裂痕。</p>
 
-<div class="pullquote">
-<p>开元盛世，是华夏逆熵史上最亮的一盏灯。这盏灯不是从天而降的，是无数只弯着的手一起举起来的。但灯光太亮了，所有人都眯起了眼。只有杨慎矜在库房的阴影里睁着眼。他看见了什么？他不敢说。但他会说的——在他死之前。</p>
-</div>
+            <div class="section-title">五、杨慎矜的眼</div>
+            <p>但有一双眼睛还没有闭上。杨慎矜，监察御史，杨崇礼的儿子。杨崇礼在太府寺管了二十年的国库，一寸一缕都亲自核验，时人说他苛刻。杨慎矜继承了父亲的苛刻。他坐在太府寺的库房里，陪着年迈的父亲翻账本。账本上记着天下赋税，钱帛粮食堆积如山。</p>
+            <p>可他看到了另一层。他看到了国库里的每一匹绢、每一斗米都有来历，但他看不到那些流入进奏院的钱去了哪里，看不到柜坊里寄存的财富归在谁的名下，看不到私商发行的飞钱背后沉淀着多少不交税的利润。公的账，他翻烂了。私的账，他一页都摸不到。</p>
+            <p>那个总在人前谈礼尚德行的张说，在私下里究竟聚敛了多少？那个整天把天下兴亡挂在嘴边的张九龄，他的家族又做着怎样的买卖？他心里有数，只是不敢打开潘多拉的魔盒。他隐隐感觉到，这个盛世最繁荣的地方，正是裂缝最深的起点。他听到国库的账本上，除了百姓的汗味，还有一种他叫不出名字的腥味——金权的腥味。</p>
+            <p>金网已经织好。饕餮闻到了盛世的香味。</p>
 
-<p style="text-align: center; color: #aaa; margin-top: 2rem;"><em>（第5集预告：李林甫上台。公权金融的第一步，也是金权反扑的第一步。）</em></p>
-</div>
+            <div class="pullquote">
+                <p>开元盛世，是华夏逆熵史上最亮的一盏灯。这盏灯不是从天而降的，是无数只弯着的手一起举起来的。但灯光太亮了，所有人都眯起了眼。只有杨慎矜在库房的阴影里睁着眼。他看见了什么？他不敢说。但他会说的——在他死之前。</p>
+            </div>
 
-<div class="episode-nav">
-<a href="luhuo5000-3.html">← 第3集</a>
-<a href="luhuo5000-5.html">第5集 →</a>
-</div>
+            <p style="text-align: center; color: #aaa; margin-top: 2rem;"><em>（第5集预告：李林甫上台。公权金融的第一步，也是金权反扑的第一步。）</em></p>
+        </div>
 
-<footer>
-炉火路口 · 文明逆熵操作系统 | 小说连载 · 保留版权<br>
-炉火五千年 · 每日更新
-</footer>
-</div>
+        <div class="episode-nav">
+            <a href="luhuo5000-3.html">← 第3集</a>
+            <a href="luhuo5000-5.html">第5集 →</a>
+        </div>
 
-<!-- 朗读控制条 -->
-<div class="tts-bar" id="ttsBar" style="display:none;">
-    <button class="tts-btn" id="ttsBtn" onclick="toggleTTS()">🔊 朗读</button>
-    <div class="tts-speed">
-        <span>语速</span>
-        <input type="range" id="ttsRate" min="0.5" max="3" step="0.25" value="1" oninput="updateRate()">
-        <span id="ttsRateLabel">1x</span>
+        <footer>
+            炉火路口 · 文明逆熵操作系统 | 小说连载 · 保留版权<br>
+            炉火五千年 · 每日更新
+        </footer>
     </div>
-    <span class="tts-status" id="ttsStatus"></span>
-</div>
 
-<script>
-let ttsText = '';
-let ttsChunks = [];
-let ttsChunkIndex = 0;
-let ttsPlaying = false;
-let ttsPaused = false;
-let ttsUtterance = null;
+    <script>
+        (function() {
+            // ========== DOM 引用 ==========
+            const readAloudBar = document.getElementById('readAloudBar');
+            const playBtn = document.getElementById('readAloudPlayBtn');
+            const stopBtn = document.getElementById('readAloudStopBtn');
+            const labelEl = document.getElementById('readAloudLabel');
+            const iconPlay = document.getElementById('iconPlay');
+            const iconPause = document.getElementById('iconPause');
+            const episodeEl = document.getElementById('episode-content');
 
-function initTTS() {
-    if (!('speechSynthesis' in window)) return;
-    const container = document.querySelector('.episode') || document.querySelector('.container');
-    if (!container) return;
-    ttsText = container.innerText.trim();
-    if (ttsText.length < 50) return;
-    ttsChunks = ttsText.match(/[^。！？；\n]+[。！？；\n]?/g) || [ttsText];
-    document.getElementById('ttsBar').style.display = 'flex';
-}
+            // ========== 状态管理 ==========
+            const STATE = {
+                IDLE: 'idle',
+                PLAYING: 'playing',
+                PAUSED: 'paused',
+            };
 
-function toggleTTS() {
-    if (!ttsText) return;
-    const btn = document.getElementById('ttsBtn');
-    if (ttsPlaying && !ttsPaused) {
-        window.speechSynthesis.pause();
-        ttsPaused = true;
-        ttsPlaying = false;
-        btn.textContent = '▶ 继续';
-        btn.classList.remove('playing');
-        document.getElementById('ttsStatus').textContent = '已暂停';
-    } else if (ttsPaused) {
-        window.speechSynthesis.resume();
-        ttsPaused = false;
-        ttsPlaying = true;
-        btn.textContent = '⏸ 暂停';
-        btn.classList.add('playing');
-        document.getElementById('ttsStatus').textContent = '正在朗读...';
-    } else {
-        ttsChunkIndex = 0;
-        ttsPlaying = true;
-        ttsPaused = false;
-        btn.textContent = '⏸ 暂停';
-        btn.classList.add('playing');
-        document.getElementById('ttsStatus').textContent = '正在朗读...';
-        speakNextChunk();
-    }
-}
+            let currentState = STATE.IDLE;
+            let textSegments = [];
+            let currentSegmentIndex = 0;
+            let currentUtterance = null;
 
-function speakNextChunk() {
-    if (ttsChunkIndex >= ttsChunks.length) {
-        ttsPlaying = false;
-        ttsPaused = false;
-        const btn = document.getElementById('ttsBtn');
-        btn.textContent = '🔊 朗读';
-        btn.classList.remove('playing');
-        document.getElementById('ttsStatus').textContent = '朗读完毕';
-        return;
-    }
-    const utterance = new SpeechSynthesisUtterance(ttsChunks[ttsChunkIndex]);
-    utterance.rate = parseFloat(document.getElementById('ttsRate').value);
-    utterance.lang = 'zh-CN';
-    utterance.onend = () => {
-        ttsChunkIndex++;
-        speakNextChunk();
-    };
-    utterance.onerror = (e) => {
-        if (e.error !== 'interrupted') {
-            ttsChunkIndex++;
-            speakNextChunk();
-        }
-    };
-    window.speechSynthesis.speak(utterance);
-    ttsUtterance = utterance;
-    document.getElementById('ttsStatus').textContent = `正在朗读... (${ttsChunkIndex + 1}/${ttsChunks.length})`;
-}
-
-function updateRate() {
-    const rate = document.getElementById('ttsRate').value;
-    document.getElementById('ttsRateLabel').textContent = rate + 'x';
-    if (ttsPlaying && !ttsPaused) {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(ttsChunks[ttsChunkIndex]);
-        utterance.rate = parseFloat(rate);
-        utterance.lang = 'zh-CN';
-        utterance.onend = () => {
-            ttsChunkIndex++;
-            speakNextChunk();
-        };
-        utterance.onerror = (e) => {
-            if (e.error !== 'interrupted') {
-                ttsChunkIndex++;
-                speakNextChunk();
+            // ========== 检查浏览器支持 ==========
+            if (!('speechSynthesis' in window)) {
+                // 不支持朗读，隐藏控制栏
+                if (readAloudBar) {
+                    readAloudBar.style.display = 'none';
+                }
+                console.warn('当前浏览器不支持 Speech Synthesis API');
+                return;
             }
-        };
-        window.speechSynthesis.speak(utterance);
-        ttsUtterance = utterance;
-    }
-}
 
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(initTTS, 500);
-});
-</script>
+            // ========== 提取朗读文本段落 ==========
+            function extractTextSegments() {
+                const segments = [];
+                if (!episodeEl) return segments;
+
+                // 选择需要朗读的元素：episode-meta, section-title, p, pullquote 内的 p
+                const selectors = ['.episode-meta', '.section-title', 'p', '.pullquote p'];
+                const elements = episodeEl.querySelectorAll(selectors.join(','));
+
+                elements.forEach(el => {
+                    // 跳过朗读控制栏内的元素
+                    if (el.closest('#readAloudBar')) return;
+                    // 跳过 pullquote 外层的 div，但保留其内部的 p（已在选择器中处理）
+                    const text = el.innerText ? el.innerText.trim() : '';
+                    if (text.length > 0) {
+                        segments.push(text);
+                    }
+                });
+
+                // 去重：pullquote 可能被重复选中
+                const uniqueSegments = [];
+                const seen = new Set();
+                segments.forEach(seg => {
+                    const key = seg.slice(0, 40);
+                    if (!seen.has(key)) {
+                        seen.add(key);
+                        uniqueSegments.push(seg);
+                    }
+                });
+                return uniqueSegments;
+            }
+
+            // ========== 获取最佳中文语音 ==========
+            function getBestChineseVoice() {
+                const voices = speechSynthesis.getVoices();
+                if (voices.length === 0) return null;
+
+                // 优先级：zh-CN 的高质量语音
+                const preferredVoices = [];
+                const fallbackVoices = [];
+
+                voices.forEach(voice => {
+                    const lang = voice.lang.toLowerCase();
+                    if (lang.startsWith('zh-cn') || lang.startsWith('zh-hans')) {
+                        preferredVoices.push(voice);
+                    } else if (lang.startsWith('zh')) {
+                        fallbackVoices.push(voice);
+                    }
+                });
+
+                // 在 preferredVoices 中优选已知高质量语音
+                const qualityNames = ['tingting', 'huihui', 'sin-ji', 'hong', 'google'];
+                for (const name of qualityNames) {
+                    const match = preferredVoices.find(v =>
+                        v.name.toLowerCase().includes(name)
+                    );
+                    if (match) return match;
+                }
+
+                // 返回第一个 zh-CN 语音
+                if (preferredVoices.length > 0) return preferredVoices[0];
+                // 返回第一个 zh 语音
+                if (fallbackVoices.length > 0) return fallbackVoices[0];
+                // 没有中文语音，返回 null
+                return null;
+            }
+
+            // ========== 更新 UI 状态 ==========
+            function updateUI(state) {
+                currentState = state;
+                const isActive = (state === STATE.PLAYING || state === STATE.PAUSED);
+
+                // 播放按钮
+                if (state === STATE.PLAYING) {
+                    playBtn.classList.add('is-active');
+                    iconPlay.style.display = 'none';
+                    iconPause.style.display = 'block';
+                    playBtn.setAttribute('aria-label', '暂停朗读');
+                    playBtn.title = '暂停朗读';
+                } else {
+                    playBtn.classList.remove('is-active');
+                    iconPlay.style.display = 'block';
+                    iconPause.style.display = 'none';
+                    playBtn.setAttribute('aria-label', '朗读本集内容');
+                    playBtn.title = '朗读本集';
+                }
+
+                // 控制栏
+                if (isActive) {
+                    readAloudBar.classList.add('is-playing');
+                } else {
+                    readAloudBar.classList.remove('is-playing');
+                }
+
+                // 停止按钮
+                if (isActive) {
+                    stopBtn.classList.add('is-visible');
+                } else {
+                    stopBtn.classList.remove('is-visible');
+                }
+
+                // 标签文字
+                switch (state) {
+                    case STATE.IDLE:
+                        labelEl.textContent = '朗读本集';
+                        break;
+                    case STATE.PLAYING:
+                        labelEl.textContent = '正在朗读...';
+                        break;
+                    case STATE.PAUSED:
+                        labelEl.textContent = '已暂停';
+                        break;
+                }
+            }
+
+            // ========== 朗读单个段落 ==========
+            function speakSegment(index) {
+                if (index >= textSegments.length) {
+                    // 全部朗读完毕
+                    stopReading();
+                    return;
+                }
+
+                currentSegmentIndex = index;
+                const text = textSegments[index];
+                if (!text || text.length === 0) {
+                    // 空段落，跳过
+                    speakSegment(index + 1);
+                    return;
+                }
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                const voice = getBestChineseVoice();
+                if (voice) {
+                    utterance.voice = voice;
+                }
+                utterance.lang = 'zh-CN';
+                utterance.rate = 0.95;
+                utterance.pitch = 1.0;
+                utterance.volume = 1.0;
+
+                // 当前段落结束时的回调
+                utterance.onend = function() {
+                    // 检查是否被取消
+                    if (currentState === STATE.IDLE) return;
+                    // 自动朗读下一段
+                    if (currentSegmentIndex === index && currentState === STATE.PLAYING) {
+                        speakSegment(index + 1);
+                    }
+                };
+
+                utterance.onerror = function(event) {
+                    // 忽略用户取消导致的错误
+                    if (event.error === 'canceled' || event.error === 'interrupted') {
+                        return;
+                    }
+                    console.warn('朗读出错:', event.error);
+                    // 尝试继续下一段
+                    if (currentState === STATE.PLAYING) {
+                        setTimeout(() => {
+                            if (currentState === STATE.PLAYING) {
+                                speakSegment(index + 1);
+                            }
+                        }, 500);
+                    }
+                };
+
+                currentUtterance = utterance;
+                speechSynthesis.speak(utterance);
+            }
+
+            // ========== 开始朗读 ==========
+            function startReading() {
+                // 确保语音列表已加载
+                if (speechSynthesis.getVoices().length === 0) {
+                    // 等待 voices 加载
+                    speechSynthesis.addEventListener('voiceschanged', function onVoicesReady() {
+                        speechSynthesis.removeEventListener('voiceschanged', onVoicesReady);
+                        beginReading();
+                    }, { once: true });
+                    // 如果1秒后还没加载，直接用默认语音
+                    setTimeout(() => {
+                        if (currentState === STATE.IDLE && speechSynthesis.getVoices().length === 0) {
+                            beginReading();
+                        }
+                    }, 1000);
+                    // 临时显示加载状态
+                    labelEl.textContent = '加载语音...';
+                    return;
+                }
+                beginReading();
+            }
+
+            function beginReading() {
+                textSegments = extractTextSegments();
+                if (textSegments.length === 0) {
+                    labelEl.textContent = '无内容可朗读';
+                    setTimeout(() => {
+                        if (currentState === STATE.IDLE) {
+                            updateUI(STATE.IDLE);
+                        }
+                    }, 2000);
+                    return;
+                }
+                currentSegmentIndex = 0;
+                updateUI(STATE.PLAYING);
+                speakSegment(0);
+            }
+
+            // ========== 暂停朗读 ==========
+            function pauseReading() {
+                speechSynthesis.pause();
+                updateUI(STATE.PAUSED);
+            }
+
+            // ========== 恢复朗读 ==========
+            function resumeReading() {
+                speechSynthesis.resume();
+                updateUI(STATE.PLAYING);
+            }
+
+            // ========== 停止朗读 ==========
+            function stopReading() {
+                speechSynthesis.cancel();
+                currentUtterance = null;
+                currentSegmentIndex = 0;
+                textSegments = [];
+                updateUI(STATE.IDLE);
+            }
+
+            // ========== 按钮事件 ==========
+            playBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                switch (currentState) {
+                    case STATE.IDLE:
+                        startReading();
+                        break;
+                    case STATE.PLAYING:
+                        pauseReading();
+                        break;
+                    case STATE.PAUSED:
+                        resumeReading();
+                        break;
+                }
+            });
+
+            stopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                stopReading();
+            });
+
+            // ========== 页面卸载时停止朗读 ==========
+            window.addEventListener('beforeunload', function() {
+                speechSynthesis.cancel();
+            });
+
+            // ========== 页面可见性变化处理 ==========
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden && currentState === STATE.PLAYING) {
+                    // 页面隐藏时自动暂停（某些浏览器会自动暂停，这里做状态同步）
+                    // 不主动暂停，让浏览器自行处理
+                }
+            });
+
+            // ========== 预加载语音列表 ==========
+            if (speechSynthesis.getVoices().length === 0) {
+                speechSynthesis.addEventListener('voiceschanged', function() {
+                    // 语音列表已就绪，静默加载完成
+                }, { once: true });
+            }
+
+            // ========== 键盘快捷键：空格键切换播放/暂停 ==========
+            document.addEventListener('keydown', function(e) {
+                // 如果用户正在输入文本，不触发
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) {
+                    return;
+                }
+                if (e.code === 'Space' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+                    // 检查焦点是否在朗读按钮附近
+                    const activeEl = document.activeElement;
+                    if (activeEl === playBtn || activeEl === stopBtn || activeEl === document.body ||
+                        activeEl === document.documentElement) {
+                        e.preventDefault();
+                        switch (currentState) {
+                            case STATE.IDLE:
+                                startReading();
+                                break;
+                            case STATE.PLAYING:
+                                pauseReading();
+                                break;
+                            case STATE.PAUSED:
+                                resumeReading();
+                                break;
+                        }
+                    }
+                }
+            });
+
+            // ========== 初始化 UI ==========
+            updateUI(STATE.IDLE);
+            console.log('🎧 朗读功能已就绪 | 点击播放按钮或按空格键开始朗读');
+        })();
+    </script>
 </body>
 </html>
