@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>火边回信 · 读者来信目录 | 炉火路口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0a0c12;
+            color: #e8e6e3;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', serif;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .back-home {
+            margin-bottom: 1.5rem;
+        }
+        .back-home a {
+            color: #f5a623;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .subhead {
+            text-align: center;
+            color: #b89a7a;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #2a2c34;
+            padding-bottom: 1rem;
+        }
+        .letter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .letter-card {
+            background: #13161f;
+            border-radius: 24px;
+            padding: 1.5rem;
+            border: 1px solid #2a2d37;
+            transition: 0.2s;
+        }
+        .letter-card:hover {
+            border-color: #f5a623;
+            background: #1a1d27;
+        }
+        .letter-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.75rem;
+        }
+        .letter-number {
+            font-size: 0.75rem;
+            background: #2c1e16;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            color: #f5a623;
+        }
+        .letter-date {
+            font-size: 0.75rem;
+            color: #8a8e9c;
+        }
+        .letter-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .tag {
+            font-size: 0.7rem;
+            background: #1e212b;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            color: #c99b6b;
+        }
+        .letter-title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+            color: #f0cf9c;
+        }
+        .letter-excerpt {
+            color: #ccc;
+            margin: 0.75rem 0;
+            font-style: italic;
+            border-left: 3px solid #f5a623;
+            padding-left: 1rem;
+        }
+        .read-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background: none;
+            border: 1px solid #c97e3a;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #f5a623;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .read-link:hover {
+            background: #c97e3a;
+            color: #0a0c12;
+        }
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6a6e7c;
+            border-top: 1px solid #21242e;
+            padding-top: 1.5rem;
+        }
+        .submit {
+            background: #1f222c;
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .submit a {
+            color: #f5a623;
+        }
+        @media (max-width: 640px) {
+            .letter-card {
+                padding: 1.2rem;
+            }
+            .letter-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="back-home">
+        <a href="/">← 返回炉火路口首页</a>
+    </div>
+    <h1>📬 火边回信</h1>
+    <div class="subhead">读者来信 · 深哥回信 · 持续连载</div>
+
+    <div class="letter-list">
+        <!-- 第1封信 -->
+        <div class="letter-card">
+            <div class="letter-meta">
+                <span class="letter-number">📫 第1封</span>
+                <span class="letter-date">2026年5月</span>
+            </div>
+            <div class="letter-tags">
+                <span class="tag">#傲慢与通透</span>
+                <span class="tag">#自我观照</span>
+            </div>
+            <div class="letter-title">“觉得自己懂了，好像别人就不如自己了，怎么办？”</div>
+            <div class="letter-excerpt">
+                一位发现自己有点傲慢的读者，询问通透之后的优越感如何化解。深哥回信：通透不是站得更高，而是愿意从高处走下来，搬一把椅子。
+            </div>
+            <a href="letter-pride.html" class="read-link">🔥 阅读回信 →</a>
+        </div>
+
+        <!-- 第2封信 -->
+        <div class="letter-card">
+            <div class="letter-meta">
+                <span class="letter-number">📫 第2封</span>
+                <span class="letter-date">2026年5月</span>
+            </div>
+            <div class="letter-tags">
+                <span class="tag">#私的长相</span>
+                <span class="tag">#自我欺骗</span>
+            </div>
+            <div class="letter-title">“私换了公心的脸，坐在我旁边。‘私’到底长什么样？”</div>
+            <div class="letter-excerpt">
+                一位读者发现自己刚摆脱“傲慢”，又陷入更隐蔽的“私”——它穿着公心的衣服，替自己分析别人。深哥回信：私永远不会被消灭，但每一次它换脸，你能认出它来。
+            </div>
+            <a href="letter-02.html" class="read-link">🔥 阅读回信 →</a>
+        </div>
+
+        <!-- 预留第3封信（注释状态，如需启用可复制并修改）
+        <div class="letter-card">
+            <div class="letter-meta">
+                <span class="letter-number">📫 第3封</span>
+                <span class="letter-date">2026年6月</span>
+            </div>
+            <div class="letter-tags">
+                <span class="tag">#无极一念</span>
+                <span class="tag">#本源</span>
+            </div>
+            <div class="letter-title">“是不是根本就没有偏和正？一切只是阴阳鱼在转？”</div>
+            <div class="letter-excerpt">
+                读者走到“无极”的边缘，问：看见鱼在转，就是致良知吗？深哥回信：看见，就是致良知。你就是门。
+            </div>
+            <a href="letter-03.html" class="read-link">即将更新 →</a>
+        </div>
+        -->
+    </div>
+
+    <div class="submit">
+        ✉️ 你也有一封信？<br>
+        请投至：<a href="mailto:8662279@qq.com?subject=火边回信投稿">8662279@qq.com</a><br>
+        <span style="font-size: 0.8rem; opacity: 0.7;">炉火边永远有空椅子</span>
+    </div>
+
+    <footer>
+        炉火路口 · 文明逆熵操作系统<br>
+        回信会持续更新，点击首页「火边回信」区域可回到此目录。
+    </footer>
+</div>
+</body>
+</html>
