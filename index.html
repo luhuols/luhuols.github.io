@@ -360,7 +360,130 @@
             <a href="baiyin-wange.html" class="bronze-btn">→ 阅读特别篇</a>
         </div>
 
-        <h2>📐 斩杀线 · 铁的规律</h2>
+    <!-- ================= 火边回信 · 读者来信连载区域 ================= -->
+<style>
+    /* 太极动画 & 信件卡片样式（仅作用于该区域，不影响全局） */
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    .letters-section {
+        margin: 3rem 0 2rem;
+        border-top: 1px solid rgba(245,166,35,0.2);
+        padding-top: 2rem;
+    }
+    .letter-item {
+        background: rgba(44, 33, 24, 0.4);
+        border-radius: 2rem;
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 1.2rem;
+        backdrop-filter: blur(2px);
+        transition: 0.2s;
+        border: 1px solid rgba(230,213,184,0.1);
+    }
+    .letter-item:hover {
+        background: rgba(44, 33, 24, 0.7);
+        border-color: rgba(245,166,35,0.3);
+    }
+    .letter-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0.5rem;
+    }
+    .letter-tag {
+        font-size: 0.7rem;
+        background: #2c1e16;
+        padding: 0.2rem 0.8rem;
+        border-radius: 20px;
+        color: #f5a623;
+    }
+    .letter-category {
+        font-size: 0.7rem;
+        color: #c99b6b;
+    }
+    .letter-quote {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        font-style: italic;
+        color: #f0cf9c;
+    }
+    .letter-author {
+        color: #d6b17e;
+        margin: 0 0 0.8rem 0;
+    }
+    .read-link {
+        background: none;
+        border: 1px solid #c97e3a;
+        padding: 0.3rem 1.2rem;
+        border-radius: 30px;
+        display: inline-block;
+        font-size: 0.8rem;
+        transition: 0.2s;
+        color: #f5a623;
+        text-decoration: none;
+    }
+    .read-link:hover {
+        background: #c97e3a;
+        color: #0a0c12;
+    }
+</style>
+
+<div class="letters-section">
+    <!-- 太极动画与座右铭 -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; background: #0f1118; border-radius: 60px; padding: 0.6rem 1.5rem; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; border: 1px solid rgba(245,166,35,0.3);">
+        <div style="width: 44px; height: 44px; position: relative; animation: spin 8s infinite linear; flex-shrink: 0;">
+            <div style="position: absolute; width: 100%; height: 100%; background: #e8e6e3; border-radius: 50%; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 50%; width: 50%; height: 100%; background: #f5a623;"></div>
+                <div style="position: absolute; bottom: 0; left: 50%; width: 50%; height: 100%; background: #2a2d37;"></div>
+                <div style="position: absolute; top: 25%; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #2a2d37; border-radius: 50%; z-index: 2;"></div>
+                <div style="position: absolute; bottom: 25%; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; background: #f5a623; border-radius: 50%; z-index: 2;"></div>
+            </div>
+        </div>
+        <div style="font-size: 0.85rem; color: #f0cf9c; border-left: 2px solid #f5a623; padding-left: 0.8rem;">
+            公与私，阴阳鱼，须臾不可分离
+            <span style="display: block; font-size: 0.7rem; color: #b89a7a;">看见，即疗愈</span>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span style="font-size: 1.6rem;">📬</span>
+        <h2 style="border-left: none; margin: 0.2rem 0 0; font-size: 1.6rem;">火边回信</h2>
+        <p style="color: #b89a7a; font-size: 0.85rem;">读者来信 · 深哥回信 · 持续连载</p>
+    </div>
+
+    <!-- 第1封 -->
+    <div class="letter-item">
+        <div class="letter-meta">
+            <span class="letter-tag">📫 第1封</span>
+            <span class="letter-category">#傲慢与通透</span>
+        </div>
+        <div class="letter-quote">“觉得自己懂了，好像别人就不如自己了，怎么办？”</div>
+        <div class="letter-author">—— 一位发现自己有点傲慢的读者</div>
+        <div><a href="letters/letter-pride.html" class="read-link">🔥 阅读回信 →</a></div>
+    </div>
+
+    <!-- 第2封 -->
+    <div class="letter-item">
+        <div class="letter-meta">
+            <span class="letter-tag">📫 第2封</span>
+            <span class="letter-category">#私的长相</span>
+        </div>
+        <div class="letter-quote">“私换了公心的脸，坐在我旁边。‘私’到底长什么样？”</div>
+        <div class="letter-author">—— 一位看见“私”换脸的读者</div>
+        <div><a href="letters/letter-02.html" class="read-link">🔥 阅读回信 →</a></div>
+    </div>
+
+    <div style="text-align: center; margin: 1.2rem 0 1rem;">
+        <a href="letters/index.html" style="color: #f5a623; font-size: 0.85rem;">📖 查看全部来信 →</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 1rem; opacity: 0.7;">
+        <span style="font-size: 0.75rem;">✉️ 来信请投：<a href="mailto:8662279@qq.com?subject=火边回信投稿" style="border-bottom: none;">8662279@qq.com</a>  ·  炉火边永远有空椅子</span>
+    </div>
+</div>
+<!-- ================= 火边回信结束 ================= -->    <h2>📐 斩杀线 · 铁的规律</h2>
         <div class="scale-diagram">
             <svg width="100%" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; display: inline-block;">
                 <rect width="400" height="240" fill="#0f1118" rx="12"/>
