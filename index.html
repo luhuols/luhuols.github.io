@@ -82,11 +82,18 @@
             margin: 1rem 0;
         }
         .pain-item {
-            background: #1e212b;
-            padding: 0.3rem 0.8rem;
-            border-radius: 40px;
-            color: #ffb347;
-        }
+    background: #1e212b;
+    padding: 0.3rem 0.8rem;
+    border-radius: 40px;
+    color: #ffb347;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+.pain-item:hover {
+    background: #2a2d37;
+    color: #f5a623;
+}
         .card {
             background: #13161f;
             border-radius: 20px;
@@ -509,18 +516,16 @@
 <!-- 👆 ========== 无极心理学整合区域结束 ========== 👆 -->  
 
         <!-- 痛点卡片 -->
-        <div class="pain-points">
-            <div style="font-weight:600;">✧ 你正在经历什么？ ✧</div>
-            <div class="pain-grid">
-                <span class="pain-item">😰 996/大小周</span>
-                <span class="pain-item">🏠 房贷压垮一切</span>
-                <span class="pain-item">📚 教育内卷</span>
-                <span class="pain-item">👴 养老焦虑</span>
-                <span class="pain-item">🏥 不敢生病</span>
-                <span class="pain-item">💸 网贷深渊</span>
-                <span class="pain-item">📉 就业/裁员</span>
-                <span class="pain-item">⚡ 明天会不会掉下去？</span>
-            </div>
+    <div class="pain-grid">
+    <a href="pain/996.html" class="pain-item">😰 996/大小周</a>
+    <a href="pain/fangdai.html" class="pain-item">🏠 房贷压垮一切</a>
+    <a href="pain/jiaoyu.html" class="pain-item">📚 教育内卷</a>
+    <a href="pain/yanglao.html" class="pain-item">👴 养老焦虑</a>
+    <a href="pain/shengbing.html" class="pain-item">🏥 不敢生病</a>
+    <a href="pain/wangdai.html" class="pain-item">💸 网贷深渊</a>
+    <a href="pain/jiuye.html" class="pain-item">📉 就业/裁员</a>
+    <a href="pain/mingtian.html" class="pain-item">⚡ 明天会不会掉下去？</a>
+</div>
             <p>不是你不够努力。这些痛感的背后，是一条隐形的<strong>"斩杀线"</strong>——系统在你不注意时，把一批又一批人推下深渊。</p>
         </div>
 
