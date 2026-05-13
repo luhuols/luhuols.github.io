@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>斩杀线诊断 · 校园霸凌 | 炉火路口</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0a0c12;
+            color: #e8e6e3;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #0f1118;
+            border-radius: 32px;
+            padding: 2.5rem 2rem;
+            border: 1px solid #2a2d37;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            background: #1e212b;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            color: #f5a623;
+            text-decoration: none;
+        }
+        .back-link:hover { background: #2a2d37; }
+        .badge {
+            background: #2c1e16;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #f5a623;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            border-left: 4px solid #f5a623;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            color: #f5e6c7;
+        }
+        .subtitle {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1.2rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        .action-box {
+            background: #1f1a10;
+            border-left: 3px solid #f5a623;
+            padding: 1.2rem;
+            margin-top: 2rem;
+            border-radius: 12px;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+        .action-box strong { color: #f5a623; }
+        .ending-line {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #2a2d37;
+            color: #aaa;
+            font-style: italic;
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #6a6e7c;
+        }
+        a { color: #f5a623; text-decoration: none; }
+        @media (max-width: 640px) {
+            body { padding: 1rem 0.5rem; }
+            .container { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="../index.html" class="back-link">← 返回炉火路口首页</a>
+    <div class="badge">📐 斩杀线诊断</div>
+    <h1>校园霸凌</h1>
+    <div class="subtitle">给家长看的</div>
+
+    <p>你上一次接孩子放学，是什么时候？</p>
+    <p>不是顺路，不是正好有空——就是专程去等他。你站在校门口，看着那些穿一模一样校服的男孩女孩涌出来，叽叽喳喳，推推搡搡。你一眼就找到了他。他走得不快，书包带子滑到胳膊肘，低着头。你喊了他一声，他抬头看你，然后挤出一个笑。那个笑你一眼就看穿了——不是开心的笑，是让你放心的笑。</p>
+    <p>你心里咯噔了一下，但没有问。你怕问了他会更难过。你怕问了自己不知道怎么办。你怕问出来的那个名字，是你惹不起的。你怕问到最后发现——欺负他的不是某一个坏孩子，是所有孩子默认的秩序。</p>
+    <p>如果这些担忧很熟悉，没关系。很多人都很熟悉。你不是一个人。</p>
+    <p>校园霸凌不是一个“欺负人的坏小孩”的故事。它是斩杀线在未成年世界里最赤裸裸的预演。那个被孤立的座位、那个被起的外号、那个在厕所里被推搡的动作——不是在展示谁强谁弱，是在向所有围观的孩子广播：不站队，下一个就是你。</p>
+    <p>这是比成年社会更残酷的小型黑暗森林。成年人有法律兜底，有辞职逃跑的选项。孩子没有。孩子逃不出教室，逃不出宿舍，逃不出那个巴掌大的操场。他在学校的时间，比你上班的时间还长。他被困在那片林子里，周围的每一棵树都可能藏着冷箭。他必须靠自己，但公心还没长好，私欲却在最旺盛的年纪。他不知道怎么伸手，也不知道该向谁伸手。他只能在每一个课间低头系鞋带，把鞋带松开，再系上，再松开——只为了多蹲一会儿，不被看见，也不去看见别人。</p>
+    <p>有一个冷得不能再冷的数字：1/e，约等于36.79%。校园里的丛林法则之所以残酷，是因为它和成人世界的丛林法则用的同一套底层代码——如果你在未成年时就反复体验被淘汰的恐惧，恐惧就会长进你的骨头里，成为你看自己的默认眼神。你不是被某一拳打垮的，你是被“我只能靠自己”这个念头反复摩擦，磨到光灭了还以为是自己的错。</p>
+    <p>但你不是那个数字。你是能看到这一切的家长。</p>
+    <p>你不需要成为律师、警察、或者冲到学校拍桌子的那个人。那些都需要你现在可能没有的勇气和力气。你只需要做到一件事：让他知道家里不是另一片森林。家是你拆掉所有法则，只留一条的地方：在这里，你不必独自面对黑暗。</p>
+    <p>今天接他放学的时候，不用问“今天有没有人欺负你”——这个问题太像审讯，他只会回“没有”。用一句更宽松的话：“今天学校有什么事让你觉得特别烦？”如果他不说，没关系。他只是还没确认你是队友不是法官。你给他夹一筷子他爱吃的菜。你把他书包里揉成团的试卷展平，什么也不说。你在他房间门口多站一会儿，问他要不要一杯热水。他在学校被观测的方式是监视和评判，你让他重新体验什么叫被温柔地看见。</p>
+    <p>每日一伸，在这里是你在家里点一盏灯，让他自己走出来。</p>
+    <p>也和学校沟通一次。不是去投诉，不是去理论。就是去问老师一句话：“我孩子最近在学校有没有跟谁不太合？我看他回家话有点少。”你在请老师一起观测。一个人被观测到，恐惧就坍缩一点。一个班的观测者越多，霸凌的空间就越小。你不是去战斗的，是去增加观测者的。你、老师、那个刚好经过的保安大叔——每一个增加，都是一处来自文明的逆熵。</p>
+    <p>斩杀线是冷的，操场的风是刺骨的，但你接他回家的那条路不是。那条路他已经走了一百遍，但今天你站在校门口等他的时候，他看到你的第一眼，心里那块硬硬的东西就松了一点。他低头笑了一下——这回是真的。</p>
+
+    <div class="action-box">
+        <strong>🔥 每日一伸：</strong><br>
+        • 如果孩子跟你说了一个名字，不管多小的事，先说“谢谢你告诉我”，再问“需要我做什么”。<br>
+        • 如果你就是老师，今天放学后，多留一分钟。只看那个最后一个离开教室的孩子。他是不是又在反复系鞋带。
+    </div>
+
+    <div class="ending-line">
+        <p><strong>此刻，另一个城市，另一个孩子正从校门口走出来。他书包带子滑下来了，但他没管。他看到马路对面有人在等他。那个人穿着一件旧外套，双手插在口袋里，朝他歪了一下头。他跑过去，书包在背后一颠一颠。</strong></p>
+    </div>
+
+    <footer>
+        炉火长明，薪火永续。今晚的炉火，给每一个还在黑暗中独自系鞋带的孩子，也给每一个不知道该怎么做但还在接孩子放学的你。<br>
+        <a href="../index.html">返回首页</a>
+    </footer>
+</div>
+</body>
+</html>
