@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Inter-inclusion Category to Spacetime Geometry</title>
+    
+    <!-- MathJax 3 配置与加载 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+        h1, h2, h3 {
+            color: #111;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.3rem;
+        }
+        h1 { font-size: 1.8rem; }
+        h2 { font-size: 1.5rem; margin-top: 2rem; }
+        h3 { font-size: 1.2rem; margin-top: 1.5rem; }
+        .metadata {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+        .metadata p { margin: 0.2rem 0; }
+        .abstract {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-left: 4px solid #007acc;
+            margin: 1.5rem 0;
+        }
+        .abstract p { margin: 0.5rem 0; }
+        .author { font-weight: bold; }
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ccc;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+        a { color: #007acc; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>From Inter-inclusion Category to Spacetime Geometry:<br>A Conceptual Framework Based on Discrete-Continuous Duality</h1>
+    <p class="author">Liu Wei</p>
+    <p>Independent Researcher, Chongqing, China<br>
+    Email: <a href="mailto:13320205668@163.com">13320205668@163.com</a></p>
+    <p><em>July 21, 2026</em></p>
+</header>
+
+<section class="metadata">
+    <h3>arXiv Metadata</h3>
+    <p><strong>Authors:</strong> Liu Wei</p>
+    <p><strong>Affiliation:</strong> Independent Researcher, Chongqing, China</p>
+    <p><strong>Primary Category:</strong> gr-qc (General Relativity and Quantum Cosmology)</p>
+    <p><strong>Secondary Category:</strong> math-ph (Mathematical Physics)</p>
+</section>
+
+<section class="abstract">
+    <h3>Abstract</h3>
+    <p>We propose the "inter-inclusion category" (I-category) as a conceptual framework (a non-rigorous categorical framework, not a strict axiomatic system) exploring the possibility of unifying the algebraic generation of quantum mechanics and the geometric constraints of general relativity. Inspired by the discrete-continuous duality in noncommutative geometry, we formalize a projection mechanism from discrete algebraic morphisms to continuous geometric metrics. We argue that general relativity and quantum mechanics can be viewed as approximations of the I-category in the commutative and noncommutative limits, respectively. Using Gelfand duality and Gromov-Hausdorff convergence theory, we provide a mathematical feasibility analysis for this algebraic-geometric renormalization process. We emphasize that this paper presents a conceptual framework rather than a derivation from first principles—it does not provide a rigorous categorical axiomatization, nor a complete calculation of the Einstein field equations. The core thesis of the I-category can be condensed into one sentence: every algebraic generation relation intrinsically accompanies a geometric constraint structure—generation and constraint are not two successive steps but two projections of the same morphism.</p>
+</section>
+
+<main>
+
+<h2>1. Introduction</h2>
+
+<h3>1.1 Problem Statement</h3>
+<p>Contemporary fundamental physics faces a deep mathematical schism. Quantum field theory takes the operator algebra on Hilbert space as its fundamental language—physical quantities are non-commuting operators, and states are vectors of linear superposition. General relativity takes the metric tensor on a four-dimensional differential manifold as its fundamental language—physical quantities are smooth geometric objects, and states are the structure of curved spacetime itself. Each has achieved astonishing success in experimental precision, but when brought together—for instance, in the context of quantum gravity near the Planck scale—the conflict of mathematical frameworks becomes unavoidable: there is no known mathematical bridge between the non-commutativity of operator algebras and the smoothness of differential manifolds.</p>
+
+<p>The essence of this schism can be more precisely formulated as the incompatibility of two limiting processes. The core structure of quantum mechanics is algebraic generation—physical quantities are generated by the algebraic relations of non-commuting operators, and the state space is the carrier of algebraic representations. The core structure of general relativity is geometric constraint—physical quantities are determined by the constraints of the metric tensor on spacetime curvature, and the state space is itself a geometric structure. In ordinary macroscopic and low-velocity situations, these two structures operate well independently and do not conflict. But at the Planck scale, a mathematical framework must simultaneously accommodate the generative logic of non-commutative algebra and the constraining logic of curved spacetime—this is precisely the core problem that quantum gravity theories must solve.</p>
+
+<h3>1.2 Core Intuition</h3>
+<p>This paper attempts to explore a conceptual possibility: if "generation" and "constraint" are not two independent physical mechanisms, but two projections of the same deep structure—then the "non-commutative algebraic generation" of quantum mechanics and the "continuous geometric constraint" of general relativity may obtain a unified mathematical expression within this deep structure.</p>
+
+<p>This intuition is not without precedent. In the mathematical physics research of discrete and continuous geometry, there exists a general structure—a discrete generative rule (such as defining local morphisms on a lattice) approximates a continuous geometric constraint under certain conditions (such as the smooth limit of that lattice at large scales). This duality of "discrete generation and continuous constraint" has multiple technical versions in contemporary mathematics: the Gelfand duality in noncommutative geometry places commutative C*-algebras in one-to-one correspondence with locally compact topological spaces; the discrete curvature in Regge calculus converges to smooth Riemannian curvature under appropriate limits; Gromov-Hausdorff convergence theory provides rigorous mathematical criteria for discrete metric spaces approximating continuous metric spaces. This paper will argue that these known mathematical structures can be coherently expressed under a unified conceptual framework—the "inter-inclusion category."</p>
+
+<h3>1.3 Positioning and Contribution</h3>
+<p>It should be honestly acknowledged that this paper presents a conceptual framework rather than a proof of rigorous mathematical theorems. The definition of the inter-inclusion category does not meet the standard of categorical axiomatization—the projection condition for dual morphisms does not provide a complete construction of the projection operators, the director is introduced only as a heuristic concept rather than a rigorous 2-morphism, and the natural transformation structure of the representation functor is not fully given. The goal of this paper is not to replace mathematically rigorous axiomatic systems for quantum gravity (such as Atiyah's axioms for topological quantum field theory, or Connes' spectral triple in noncommutative geometry), but to provide a possible conceptual starting point for subsequent rigorous mathematical work. Therefore, the arguments of this paper do not claim "proof" or "derivation," but rather demonstrate conceptual structural affinity and logical chains. The value of this paper lies in conceptual innovation and framework construction; its rigorous mathematization and empirical verification belong to future work.</p>
+
+<h2>2. Conceptual Framework: The Inter-inclusion Category</h2>
+
+<h3>2.1 A Heuristic Analogy</h3>
+<p>Before entering the detailed exposition of the conceptual framework, we introduce a heuristic physical analogy. Consider a crystal lattice model—a crystal composed of discrete atoms, each vibrating near its equilibrium position, with the propagation of vibrations described by lattice dynamics equations. At the microscopic scale, the lattice is discrete—atomic positions are discrete, and vibrational modes are quantized. At the macroscopic scale, when the observation scale is much larger than the lattice constant, the discrete lattice vibrations can be approximately described as continuous elastic waves—sound waves in a solid. This is the "lattice-continuum correspondence."</p>
+
+<h3>2.2 The Conceptual Framework of the Inter-inclusion Category</h3>
+<p><strong>Objects.</strong> An object $X$ represents a "generative node"—it can be understood as a basic unit in a discrete spacetime structure.</p>
+<p><strong>Morphisms.</strong> A morphism $f: X \to Y$ represents a "directional generative relation" between objects $X$ and $Y$. $f$ has a direction—it starts from $X$ and points to $Y$, indicating that $X$ "extends" to $Y$.</p>
+<p><strong>Duals.</strong> For every morphism $f: X \to Y$, there exists a dual morphism $f^\dagger: Y \to X$, satisfying the projection conditions $f^\dagger \circ f = P_X$ and $f \circ f^\dagger = P_Y$, where $P_X$ and $P_Y$ are projection operators on $X$ and $Y$ respectively. This dual structure is the core feature of the inter-inclusion category.</p>
+<p><strong>Director.</strong> To describe the transition of morphism composition from "microscopic non-commutativity" to "macroscopic commutativity," a heuristic structure called the director is introduced.</p>
+<p><strong>Structural Functor (Representation).</strong> For any object $X$, there exists a representation functor $F_X: \mathcal{M} \to \mathbf{Vect}$, mapping a morphism $f: X \to Y$ to a linear map, and mapping an object $Y$ to a vector space.</p>
+
+<h3>2.3 Small Category Condition and Physical Plausibility</h3>
+<p>To avoid set-theoretic paradoxes, it is necessary to stipulate that $\mathcal{M}$ is a small category—its collection of objects and morphisms forms a set rather than a proper class. This restriction is physically natural: at the Planck scale, the number of basic units within a finite spacetime region is finite.</p>
+
+<h2>3. Structured Formulation of the Physical Hypothesis</h2>
+<h3>3.1 The Non-commutative Limit: From Inter-inclusion Category to Quantum Mechanics</h3>
+<p>Consider the behavior of the inter-inclusion category $\mathcal{M}$ at microscopic scales—approaching the Planck length $l_P \approx 1.6 \times 10^{-35}$ m. At this scale, the morphism composition between objects exhibits strong non-commutativity: for two morphisms $f: X \to Y$ and $g: Y \to Z$, their composition $g \circ f$ is not equivalent to the reverse composition $f \circ g$. This non-commutativity is encoded by the director.</p>
+
+<h3>3.2 The Continuous Limit: From Inter-inclusion Category to General Relativity</h3>
+<p>Consider the behavior at macroscopic scales—far larger than the Planck length. At this point, after numerous coarse-graining steps, the non-commutativity is gradually averaged out: $g \circ f \approx f \circ g$. According to the Gelfand-Naimark theorem, a commutative C*-algebra is equivalent to the continuous function algebra on some locally compact Hausdorff space. Therefore, when the inter-inclusion category tends toward commutativity, it mathematically corresponds to a topological space—the four-dimensional spacetime manifold in general relativity.</p>
+
+<h3>3.3 Physical Interpretation of the "Generation-Constraint" Duality</h3>
+<p><strong>Algebraic Generation (the Quantum Side).</strong> A morphism $f: X \to Y$ represents the algebraic generation of a physical quantity from $X$ to $Y$. The non-commutativity of morphisms encodes the core features of quantum mechanics.</p>
+<p><strong>Geometric Constraint (the Geometric Side).</strong> The dual morphism $f^\dagger: Y \to X$ represents the geometric constraint accompanying the generation—$f^\dagger$ is the "return condition" that $f$ must satisfy.</p>
+
+<h2>4. Mathematical Affinity Analysis</h2>
+<h3>4.1 From Algebra to Geometry: The Gelfand-Naimark Theorem</h3>
+<p>The Gelfand-Naimark theorem states: every commutative C*-algebra $\mathcal{A}$ is isometrically isomorphic to the algebra of continuous functions vanishing at infinity $C_0(X)$ on some locally compact Hausdorff space $X$. This theorem establishes a precise correspondence between algebraic structure and geometric structure.</p>
+
+<h3>4.2 The Affinity of Geometric Constraints: Conservation Laws and Discrete Curvature</h3>
+<p>In the inter-inclusion category, every morphism $f: X \to Y$ is accompanied by a dual morphism $f^\dagger: Y \to X$. The composition $f^\dagger \circ f$ forms a closed loop. In discrete geometry, the "deficit angle" of a closed loop measures the discrete curvature of that region. In the continuous limit, these discrete curvatures converge to a smooth Riemann curvature tensor via Gromov-Hausdorff convergence.</p>
+
+<h3>4.3 Resonance with Holographic Duality</h3>
+<p>The "algebraic generation-geometric constraint" duality has a deep spiritual resonance with the holographic principle in contemporary quantum gravity research—particularly the AdS/CFT correspondence.</p>
+
+<h2>5. Discussion: Limitations and Prospects</h2>
+<h3>5.1 Programmatic Statement</h3>
+<p>This paper explicitly declares: this paper presents a conceptual framework, not a specific quantum gravity theory. The core claim can be condensed into three points: every generative morphism $f$ is accompanied by a dual constraining morphism $f^\dagger$; this structure manifests in the non-commutative limit as quantum mechanics, and in the continuous limit as general relativity; the transition between the two limits is encoded by the scale-dependence of non-commutativity.</p>
+
+<h3>5.2 Relationship to Known Frameworks</h3>
+<p>There exist noteworthy spiritual affinities between the inter-inclusion category framework and multiple known frameworks—spin networks in loop quantum gravity, worldsheet duality in string theory, and spectral triples in noncommutative geometry. The above comparisons are only conceptual affinity analyses; whether precise technical correspondence can be achieved requires subsequent rigorous mathematical work.</p>
+
+<h3>5.3 Falsification Pathways</h3>
+<p><strong>Necessity of the Dual Structure.</strong> If physically plausible discrete spacetime structures are found whose morphisms do not satisfy the duality condition—the hypothesis will be falsified.</p>
+<p><strong>Convergence in the Continuous Limit.</strong> If discrete geometric structures satisfying the duality condition do not converge to a smooth manifold during coarse-graining—the core corollary will be falsified.</p>
+<p><strong>Accommodation of the Standard Model.</strong> If the inter-inclusion category cannot accommodate the gauge group $SU(3) \times SU(2) \times U(1)$—the completeness as a physical hypothesis will receive a fatal blow.</p>
+
+<h3>5.4 Future Directions</h3>
+<p>At the theoretical level, rigorous categorical axiomatization is the primary task. A simple toy model will be presented in subsequent work. At the numerical level, the morphism network can be represented as a directed graph and tracked for geometric convergence. At the quantum simulation level, tensor networks and entanglement renormalization provide a platform for testing discrete-continuous correspondences.</p>
+
+<h2>6. Conclusion</h2>
+<p>The core claim of the inter-inclusion category can be condensed into one sentence: every algebraic generation relation intrinsically accompanies a geometric constraint structure—generation and constraint are not two successive steps, but two projections of the same morphism. Discrete generation and continuous constraint—these two seemingly incommensurable physical worlds may have always been two sides of the same coin. The inter-inclusion category is the conceptual expression of this coin.</p>
+
+<h2>References</h2>
+<ol>
+    <li>Maldacena, J. The Large N Limit of Superconformal Field Theories and Supergravity. <em>Advances in Theoretical and Mathematical Physics</em>, 1998, 2: 231-252.</li>
+    <li>Connes, A. <em>Noncommutative Geometry</em>. Academic Press, 1994.</li>
+    <li>Gromov, M. <em>Metric Structures for Riemannian and Non-Riemannian Spaces</em>. Birkhäuser, 1999.</li>
+    <li>Regge, T. General relativity without coordinates. <em>Il Nuovo Cimento</em>, 1961, 19(3): 558-571.</li>
+    <li>Baez, J. C., & Muniain, J. P. <em>Gauge Fields, Knots and Gravity</em>. World Scientific, 1994.</li>
+    <li>Atiyah, M. Topological quantum field theories. <em>Publications Mathématiques de l'IHÉS</em>, 1988, 68: 175-186.</li>
+    <li>Rovelli, C. <em>Quantum Gravity</em>. Cambridge University Press, 2004.</li>
+    <li>Polchinski, J. <em>String Theory</em> (2 vols.). Cambridge University Press, 1998.</li>
+</ol>
+
+<h2>Acknowledgments</h2>
+<p>The author thanks the anonymous reviewers for their constructive suggestions. Any remaining shortcomings are the responsibility of the author.</p>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Liu Wei. This is an author-produced version of a paper submitted to arXiv.</p>
+</footer>
+
+</body>
+</html>
