@@ -1,0 +1,41 @@
+{
+  "project": "inter-containment-volunteer",
+  "version": "v1",
+  "tasks": [
+    {
+      "task_id": "WH-001",
+      "description": "虫洞模型 Moore k=6, N=12 Nt=40",
+      "params": {"N": 12, "Nt": 40, "k": 6, "hops": 10, "seeds": 5},
+      "expected": {"runtime_minutes": 240, "memory_gb": 16},
+      "done": false
+    },
+    {
+      "task_id": "WH-002",
+      "description": "虫洞模型 Moore k=6, N=12 Nt=45",
+      "params": {"N": 12, "Nt": 45, "k": 6, "hops": 9, "seeds": 5},
+      "expected": {"runtime_minutes": 300, "memory_gb": 16},
+      "done": false
+    },
+    {
+      "task_id": "WH-003",
+      "description": "虫洞模型 Moore k=6, N=12 Nt=50",
+      "params": {"N": 12, "Nt": 50, "k": 6, "hops": 8, "seeds": 5},
+      "expected": {"runtime_minutes": 360, "memory_gb": 16},
+      "done": false
+    },
+    {
+      "task_id": "ME-001",
+      "description": "度规涌现 N=15 Nt=45",
+      "params": {"N": 15, "Nt": 45, "k": 6, "hops": 9, "seeds": 5},
+      "expected": {"runtime_minutes": 480, "memory_gb": 24},
+      "done": false
+    },
+    {
+      "task_id": "ME-002",
+      "description": "度规涌现 N=16 Nt=40",
+      "params": {"N": 16, "Nt": 40, "k": 6, "hops": 10, "seeds": 5},
+      "expected": {"runtime_minutes": 600, "memory_gb": 32},
+      "done": false
+    }
+  ]
+}
