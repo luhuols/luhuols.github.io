@@ -7,24 +7,47 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
-            background: #fafafa;
-            color: #333;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            background-color: #0a0c12;
+            color: #e8e6e3;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Serif SC', serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
         }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: #888;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .back-link:hover { color: #f5a623; }
         h1 {
-            font-size: 28px;
-            border-bottom: 3px solid #2ea44f;
-            padding-bottom: 12px;
-            margin-bottom: 24px;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #f5a623;
         }
         .subtitle {
-            color: #666;
-            font-size: 16px;
-            margin-bottom: 32px;
+            color: #aaa;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #2a2c34;
+            padding-bottom: 1rem;
+        }
+        .hero-quote {
+            background: linear-gradient(135deg, #1f1a10 0%, #2a2418 100%);
+            border-left: 6px solid #f5a623;
+            padding: 1.2rem 1.5rem;
+            margin: 1rem 0 2rem 0;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffe6c7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
         .badge {
             display: inline-block;
@@ -33,141 +56,372 @@
             color: white;
             border-radius: 4px;
             font-size: 12px;
-            margin-right: 8px;
+            margin-right: 6px;
             margin-bottom: 8px;
         }
         .badge.mit { background: #0366d6; }
-        .section {
-            margin: 32px 0;
-            padding: 24px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-        }
+        .badge.zenodo { background: #f5a623; color: #0a0c12; }
         h2 {
-            font-size: 20px;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            border-left: 4px solid #f5a623;
+            padding-left: 0.75rem;
+            color: #f5cf9f;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #f5cf9f;
+        }
+        .card {
+            background: #13161f;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #2a2d37;
+        }
+        .card.highlight {
+            border-left: 4px solid #f5a623;
+            background: linear-gradient(135deg, #1a1d27 0%, #1f1a10 100%);
         }
         a {
-            color: #0366d6;
+            color: #f5a623;
             text-decoration: none;
         }
         a:hover { text-decoration: underline; }
         .link-row {
-            margin: 12px 0;
-            padding-left: 8px;
-            border-left: 3px solid #e1e4e8;
+            margin: 10px 0;
+            padding: 10px 14px;
+            background: #0f1118;
+            border-radius: 12px;
+            border: 1px solid #292e3a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
         }
-        .link-row a {
-            font-weight: 500;
-        }
-        code {
-            background: #f6f8fa;
-            padding: 2px 6px;
-            border-radius: 3px;
+        .link-row code {
+            background: #1e212b;
+            padding: 2px 8px;
+            border-radius: 4px;
             font-family: "SFMono-Regular", Consolas, monospace;
-            font-size: 14px;
+            font-size: 0.85rem;
+            color: #f5a623;
+        }
+        .link-row .actions a {
+            margin-left: 12px;
+            font-size: 0.85rem;
+        }
+        .code-block {
+            background: #0b0d12;
+            padding: 1rem;
+            border-radius: 14px;
+            font-family: "SFMono-Regular", Consolas, monospace;
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            border: 1px solid #292e3a;
+            color: #ccc;
+            overflow-x: auto;
+        }
+        .code-block .comment { color: #6a6e7c; }
+        .code-block .cmd { color: #f5a623; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #2a2d37;
+        }
+        th {
+            color: #f5a623;
+            font-weight: 600;
+            background: #0f1118;
+        }
+        td { color: #ccc; }
+        tr:hover td { background: #1a1d27; }
+        .metric {
+            display: inline-block;
+            background: #1e212b;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            margin: 0.3rem 0.3rem 0.3rem 0;
+            border: 1px solid #2a2d37;
+        }
+        .metric strong {
+            color: #f5a623;
+            font-size: 1.1rem;
+        }
+        .metric span {
+            color: #888;
+            font-size: 0.8rem;
+            display: block;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .btn-primary {
+            background: #f5a623;
+            color: #0a0c12;
+        }
+        .btn-primary:hover {
+            background: #ffb347;
+            text-decoration: none;
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #c0a060;
+            color: #c0a060;
+        }
+        .btn-secondary:hover {
+            background: #c0a060;
+            color: #0a0c12;
+            text-decoration: none;
         }
         .quote {
-            margin: 20px 0;
-            padding: 16px 20px;
-            background: #fff8e1;
-            border-left: 4px solid #ffa726;
-            border-radius: 0 4px 4px 0;
+            margin: 1rem 0;
+            padding: 1rem 1.2rem;
+            background: #1f2a2a;
+            border-left: 4px solid #f5a623;
+            border-radius: 0 12px 12px 0;
             font-style: italic;
-            color: #555;
+            color: #ddd;
+            font-size: 0.95rem;
         }
-        .footer {
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid #e1e4e8;
-            color: #666;
-            font-size: 14px;
+        footer {
+            margin-top: 3rem;
             text-align: center;
+            font-size: 0.8rem;
+            color: #6a6e7c;
+            border-top: 1px solid #21242e;
+            padding-top: 1.5rem;
         }
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #666;
-            font-size: 14px;
+        @media (max-width: 640px) {
+            h1 { font-size: 1.5rem; }
+            .link-row { flex-direction: column; align-items: flex-start; }
         }
     </style>
+<base target="_blank">
 </head>
 <body>
-    <a href="/" class="back">← 返回炉火路口</a>
-    
-    <h1>🔬 互含框架 · 虫洞模型数值实验</h1>
-    <p class="subtitle">从纯粹关系网络涌现出三维时空的开源实现</p>
-    
-    <div>
-        <span class="badge">开源</span>
-        <span class="badge mit">MIT</span>
-        <span class="badge">Python</span>
-    </div>
+    <div class="container">
 
-    <div class="quote">
-        关系先于对象。伸出去必然弯回来。
-    </div>
+        <a href="/" class="back-link">← 返回炉火路口</a>
 
-    <div class="section">
-        <h2>📦 核心脚本</h2>
-        <div class="link-row">
-            <code>g3duo_v3.py</code> — 三维度规涌现模拟（BFS + β 指数）<br>
-            <a href="https://raw.githubusercontent.com/luhuols/universe-from-wuji/main/scripts/g3duo_v3.py">直接下载</a> · 
-            <a href="https://github.com/luhuols/universe-from-wuji/blob/main/scripts/g3duo_v3.py">查看源码</a>
-        </div>
-        <div class="link-row">
-            <code>g3duo_v3_angle_scan.py</code> — 角度扫描与能量预算预测<br>
-            <a href="https://raw.githubusercontent.com/luhuols/universe-from-wuji/main/scripts/g3duo_v3_angle_scan.py">直接下载</a> · 
-            <a href="https://github.com/luhuols/universe-from-wuji/blob/main/scripts/g3duo_v3_angle_scan.py">查看源码</a>
-        </div>
-        <div class="link-row">
-            <code>analyze_beta.py</code> — β 指数批量分析与稳定性判据<br>
-            <a href="https://raw.githubusercontent.com/luhuols/universe-from-wuji/main/scripts/analyze_beta.py">直接下载</a>
-        </div>
-        <div class="link-row">
-            <code>plot_network.py</code> — 网络拓扑可视化<br>
-            <a href="https://raw.githubusercontent.com/luhuols/universe-from-wuji/main/scripts/plot_network.py">直接下载</a>
-        </div>
-    </div>
+        <h1>🔬 互含框架 · 虫洞模型数值实验</h1>
+        <p class="subtitle">从纯粹关系网络涌现出三维时空的开源实现</p>
 
-    <div class="section">
-        <h2>📜 文档</h2>
-        <div class="link-row">
-            <a href="https://github.com/luhuols/universe-from-wuji/blob/main/docs/互含框架_虫洞模型实验备忘录_20260822.txt">实验备忘录（第十一节核心定量预测）</a>
+        <div>
+            <span class="badge">开源</span>
+            <span class="badge mit">MIT</span>
+            <span class="badge zenodo">Zenodo</span>
         </div>
-        <div class="link-row">
-            <a href="https://github.com/luhuols/universe-from-wuji/blob/main/ROADMAP.md">开发路线图 ROADMAP.md</a>
-        </div>
-        <div class="link-row">
-            <a href="https://github.com/luhuols/universe-from-wuji/blob/main/README.md">项目说明 README.md</a>
-        </div>
-    </div>
 
-    <div class="section">
+        <div class="hero-quote">
+            关系先于对象。三维时空不是被放进去的，是从互含网络的双向回返中<strong>涌现</strong>出来的。
+        </div>
+
+        <!-- 关键结果 -->
         <h2>📊 关键结果</h2>
-        <ul style="margin-left: 20px;">
-            <li>维度锁定：D=1,2,4,5 全 UNSTABLE，仅 <strong>D=3 STABLE</strong></li>
-            <li>度规涌现：N=5³–12³ 范围内 β = 0.85–1.11 ± 0.02</li>
-            <li>斩杀线：R₀ = 1 − 1/e ≈ 0.632</li>
-            <li>能量预算预测：Ω_b:Ω_c:Ω_Λ ≈ 5%:27%:68%</li>
-        </ul>
-    </div>
+        <div class="card">
+            <div class="metric"><strong>0.85–1.11</strong><span>β 指数范围</span></div>
+            <div class="metric"><strong>D=3</strong><span>唯一稳定维度</span></div>
+            <div class="metric"><strong>0.632</strong><span>斩杀线 R₀=1−1/e</span></div>
+            <div class="metric"><strong>8GB</strong><span>最低内存需求</span></div>
 
-    <div class="section">
-        <h2>🔗 学术引用</h2>
-        <p>支撑论文 A/B/C 的全部数值实验。Zenodo DOI 索引：</p>
-        <div class="link-row">
-            <a href="https://doi.org/10.5281/zenodo.21817655">10.5281/zenodo.21817655</a>
+            <h3 style="margin-top:1.5rem;">三相角度漂移（已验证）</h3>
+            <table>
+                <tr>
+                    <th>相区</th>
+                    <th>稀疏约束 k</th>
+                    <th>最优回返角</th>
+                    <th>度规指数 β</th>
+                    <th>物理对应</th>
+                </tr>
+                <tr>
+                    <td>稀疏相</td>
+                    <td>k=3</td>
+                    <td>180°</td>
+                    <td><strong>0.9921</strong></td>
+                    <td>暗物质极限</td>
+                </tr>
+                <tr>
+                    <td><strong>临界相</strong></td>
+                    <td><strong>k=6</strong></td>
+                    <td><strong>109.5° / 130°</strong></td>
+                    <td><strong>0.9786 / 0.9798</strong></td>
+                    <td><strong>重子物质窗口</strong></td>
+                </tr>
+                <tr>
+                    <td>混沌相</td>
+                    <td>k=26</td>
+                    <td>无显著峰值</td>
+                    <td>0.93 ± 0.01</td>
+                    <td>早期宇宙</td>
+                </tr>
+            </table>
+            <p style="color:#888; font-size:0.85rem; margin-top:0.5rem;">
+                109.5° 是四面体配位角（金刚石、水分子键角）。在 k=6 临界相中，它成为关系网络的最优回返角——结构从关系中涌现的数值证据。
+            </p>
         </div>
-    </div>
 
-    <div class="footer">
-        <p>© 刘巍 · <a href="https://github.com/luhuols/universe-from-wuji">GitHub 仓库</a> · <a href="/">返回炉火路口</a></p>
-        <p style="margin-top:8px; font-size: 12px;">关系先于对象</p>
+        <!-- 核心脚本 -->
+        <h2>📦 核心脚本</h2>
+        <div class="card">
+            <div class="link-row">
+                <div><code>g3duo_v3.py</code> — 三维度规涌现模拟（BFS + β 指数）</div>
+                <div class="actions">
+                    <a href="https://raw.githubusercontent.com/luhuols/luhuols.github.io/main/universe-from-wuji/scripts/g3duo_v3.py">直接下载</a>
+                    <a href="https://github.com/luhuols/luhuols.github.io/blob/main/universe-from-wuji/scripts/g3duo_v3.py">查看源码</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div><code>g3duo_v3_angle_scan_v3.py</code> — 角度扫描与能量预算预测</div>
+                <div class="actions">
+                    <a href="https://raw.githubusercontent.com/luhuols/luhuols.github.io/main/universe-from-wuji/scripts/g3duo_v3_angle_scan_v3.py">直接下载</a>
+                    <a href="https://github.com/luhuols/luhuols.github.io/blob/main/universe-from-wuji/scripts/g3duo_v3_angle_scan_v3.py">查看源码</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div><code>analyze_beta.py</code> — β 指数批量分析与稳定性判据</div>
+                <div class="actions">
+                    <a href="https://raw.githubusercontent.com/luhuols/luhuols.github.io/main/universe-from-wuji/scripts/analyze_beta.py">直接下载</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div><code>plot_network.py</code> — 网络拓扑可视化</div>
+                <div class="actions">
+                    <a href="https://raw.githubusercontent.com/luhuols/luhuols.github.io/main/universe-from-wuji/scripts/plot_network.py">直接下载</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 运行命令 -->
+        <h2>🖥️ 快速开始</h2>
+        <div class="card">
+            <p style="margin-bottom:1rem;">仅需 8GB 内存，一条命令跑完核心验证：</p>
+            <div class="code-block">
+<span class="comment"># 标准角度扫描（0°–180°，步长 10°，k=6）</span>
+<span class="cmd">python g3duo_v3_angle_scan_v3.py 3 8 32 16 0.15 0.02 42 moore 0 180 10 6</span>
+
+<span class="comment"># 精细扫描验证 109.5°（100°–140°，步长 2.5°）</span>
+<span class="cmd">python g3duo_v3_angle_scan_v3.py 3 8 32 16 0.15 0.02 42 moore 100 140 2.5 6</span>
+
+<span class="comment"># N=16 大网格验证（需 32GB 内存）</span>
+<span class="cmd">python g3duo_v3_angle_scan_v3.py 3 16 40 10 0.15 0.02 42 moore 0 180 10 6</span>
+            </div>
+            <p style="color:#888; font-size:0.85rem; margin-top:1rem;">
+                参数顺序：维度 N Nt hops lambda w seed nbr 起始角 结束角 步长 k
+            </p>
+        </div>
+
+        <!-- 实验数据 -->
+        <h2>📁 实验数据</h2>
+        <div class="card">
+            <p style="margin-bottom:1rem;">三相角度扫描原始数据（CSV），可直接下载分析：</p>
+            <div class="link-row">
+                <div><code>scan_v3_k3_3D_N8_Nt32_h16_w0.02_nbrmoore_seed42.csv</code></div>
+                <div class="actions">
+                    <a href="https://raw.githubusercontent.com/luhuols/luhuols.github.io/main/universe-from-wuji/data/scan_v3_k3_3D_N8_Nt32_h16_w0.02_nbrmoore_seed42.csv">下载</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div><code>scan_v3_k6_3D_N8_Nt32_h16_w0.02_nbrmoore_seed42.csv</code></div>
+                <div class="actions">
+                    <a href="https://raw.githubusercontent.com/luhuols/luhuols.github.io/main/universe-from-wuji/data/scan_v3_k6_3D_N8_Nt32_h16_w0.02_nbrmoore_seed42.csv">下载</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div><code>scan_v3_k26_3D_N8_Nt32_h16_w0.02_nbrmoore_seed42.csv</code></div>
+                <div class="actions">
+                    <a href="https://raw.githubusercontent.com/luhuols/luhuols.github.io/main/universe-from-wuji/data/scan_v3_k26_3D_N8_Nt32_h16_w0.02_nbrmoore_seed42.csv">下载</a>
+                </div>
+            </div>
+            <p style="color:#888; font-size:0.85rem; margin-top:1rem;">
+                更多数据见 <a href="https://github.com/luhuols/luhuols.github.io/tree/main/universe-from-wuji/data">GitHub data 目录</a>
+            </p>
+        </div>
+
+        <!-- 文档 -->
+        <h2>📜 文档</h2>
+        <div class="card">
+            <div class="link-row">
+                <div>📖 <strong>README.md</strong> — 项目说明与安装指南</div>
+                <div class="actions">
+                    <a href="https://github.com/luhuols/luhuols.github.io/blob/main/universe-from-wuji/README.md">阅读</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div>🗺️ <strong>ROADMAP.md</strong> — 开发路线图</div>
+                <div class="actions">
+                    <a href="https://github.com/luhuols/luhuols.github.io/blob/main/universe-from-wuji/ROADMAP.md">阅读</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div>🤝 <strong>CONTRIBUTING.md</strong> — 如何贡献数据</div>
+                <div class="actions">
+                    <a href="https://github.com/luhuols/luhuols.github.io/blob/main/universe-from-wuji/CONTRIBUTING.md">阅读</a>
+                </div>
+            </div>
+            <div class="link-row">
+                <div>📝 <strong>实验备忘录</strong> — 虫洞模型实验记录</div>
+                <div class="actions">
+                    <a href="https://github.com/luhuols/luhuols.github.io/blob/main/universe-from-wuji/docs/互含框架_虫洞模型实验备忘录_20260822.txt">阅读</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 学术引用 -->
+        <h2>🔗 学术引用</h2>
+        <div class="card highlight">
+            <p>本代码支撑以下论文（Zenodo DOI）：</p>
+            <ul style="margin:0.8rem 0 0 1.2rem; color:#ccc;">
+                <li>论文A：《基于分层互含因果网络的三维度规涌现》</li>
+                <li>论文C：《互含度演化与宇宙学斩杀线》</li>
+            </ul>
+            <p style="margin-top:1rem;">
+                Zenodo 论文索引：<a href="https://doi.org/10.5281/zenodo.21817655">10.5281/zenodo.21817655</a>
+            </p>
+            <div class="quote" style="margin-top:1rem;">
+                刘巍. 互含框架虫洞模型数值实验 [Software]. Zenodo. https://doi.org/10.5281/zenodo.21817655
+            </div>
+        </div>
+
+        <!-- 参与贡献 -->
+        <h2>🤝 参与贡献</h2>
+        <div class="card">
+            <p>欢迎提交角度扫描数据，共同验证宇宙能量预算预测：</p>
+            <p style="font-size:1.2rem; margin:1rem 0;">
+                <strong>Ω_b : Ω_c : Ω_Λ ≈ 5% : 27% : 68%</strong>
+            </p>
+            <p style="color:#ccc; margin-bottom:1rem;">
+                三种提交方式：GitHub Pull Request / GitHub Issue / 邮件<br>
+                详见 <a href="https://github.com/luhuols/luhuols.github.io/blob/main/universe-from-wuji/CONTRIBUTING.md">CONTRIBUTING.md</a>
+            </p>
+            <a href="https://github.com/luhuols/luhuols.github.io/issues" class="btn btn-primary">提交数据</a>
+            <a href="https://github.com/luhuols/luhuols.github.io" class="btn btn-secondary">GitHub 仓库</a>
+        </div>
+
+        <footer>
+            <p>© 刘巍 · 互含框架 · 关系先于对象</p>
+            <p>
+                <a href="https://www.luhuo.online">炉火路口</a> ·
+                <a href="https://github.com/luhuols/luhuols.github.io">GitHub</a> ·
+                <a href="https://doi.org/10.5281/zenodo.21817655">Zenodo</a>
+            </p>
+        </footer>
+
     </div>
 </body>
 </html>
