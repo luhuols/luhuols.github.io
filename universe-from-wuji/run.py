@@ -15,7 +15,7 @@ from datetime import datetime
 
 TASKS_FILE = "params/tasks.json"
 RESULTS_DIR = "results"
-SRC_FILE = "src/g3duo_v3.py"
+SRC_FILE = "scripts/g3duo_v3_fast.py"
 
 def load_tasks():
     with open(TASKS_FILE, 'r', encoding='utf-8') as f:
